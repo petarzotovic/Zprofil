@@ -26,11 +26,11 @@ a{color:#A84A08}a:hover{color:#7E3706}
 .nav a{color:#1B1B1A;text-decoration:none}
 .nav a:hover{color:#C2570B}
 .hamburger{display:none;width:48px;height:48px;align-items:center;justify-content:center;background:#fff;border:none;border-radius:6px;padding:0;cursor:pointer}
-.mob-nav{position:fixed;top:72px;left:0;width:100%;max-height:0;background:#fff;border-bottom:1px solid #E2E0DB;z-index:200;display:flex;flex-direction:column;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1)}
+.mob-nav{position:fixed;top:72px;left:0;width:100%;max-height:0;background:#fff;border-bottom:1px solid #E2E0DB;z-index:200;display:none;flex-direction:column;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1)}
 .mob-nav.open{max-height:50vh}
 .mob-nav a{color:#1B1B1A;text-decoration:none;font-size:18px;font-weight:500;padding:14px 24px;border-bottom:1px solid #E2E0DB;transition:color .2s ease}
 .mob-nav a:hover{color:#C2570B}
-.mob-overlay{position:fixed;inset:0;background:rgba(22,22,21,.4);z-index:199;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease}
+.mob-overlay{position:fixed;inset:0;background:rgba(22,22,21,.4);z-index:199;opacity:0;visibility:hidden;display:none;transition:opacity .35s ease,visibility .35s ease}
 .mob-overlay.open{opacity:1;visibility:visible}
 
 /* HERO */
@@ -137,6 +137,8 @@ html{scroll-padding-top:0}
   .logo img{height:44px}
   .nav{display:none}
   .hamburger{display:flex}
+  .mob-nav{display:flex}
+  .mob-overlay{display:block}
 
   .hero{min-height:100vh;min-height:100svh}
   .hero-inner{min-height:calc(100vh - 73px);min-height:calc(100svh - 73px)}
