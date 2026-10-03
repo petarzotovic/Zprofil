@@ -83,7 +83,9 @@ html{scroll-padding-top:0}
 .acc[open] p{max-height:200px;opacity:1;padding:0 2px 20px 46px}
 
 /* PROJEKTI */
-.projekti{background:#F6F5F2;border-bottom:1px solid #E2E0DB}
+.projekti{background:#1B1B1A;border-bottom:1px solid #E2E0DB}
+.projekti .section-title{color:#F6F5F2}
+.projekti figcaption{color:#fff}
 .projekti .wrap{padding-top:80px;padding-bottom:80px;display:flex;flex-direction:column;gap:56px}
 .proj-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .proj-fig{margin:0;display:flex;flex-direction:column;gap:14px}
@@ -104,7 +106,7 @@ html{scroll-padding-top:0}
 .dot.active{width:22px;border-radius:4px;background:#C2570B}
 
 /* O NAMA */
-.o-nama{border-bottom:1px solid #E2E0DB}
+.o-nama{background:#F6F5F2;border-bottom:1px solid #E2E0DB}
 .o-nama .wrap{padding-top:80px;padding-bottom:80px}
 .o-nama-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:center}
 .o-nama-text{display:flex;flex-direction:column;gap:24px}
@@ -113,8 +115,40 @@ html{scroll-padding-top:0}
 .o-nama-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .o-nama-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(22,22,21,.45) 0%,rgba(22,22,21,.15) 50%,transparent 100%)}
 
+/* RECENZIJE */
+.recenzije{background:#1B1B1A;border-bottom:1px solid #E2E0DB}
+.recenzije .section-title,.rev-score-num{color:#F6F5F2}
+.rev-mobile,.rev-link.rev-link-m{display:none}
+.rev-marquee{overflow:hidden;margin:0 -16px;padding:6px 0}
+.rev-track{display:flex;width:max-content;animation:rev-scroll 24s linear infinite}
+.rev-marquee:hover .rev-track{animation-play-state:paused}
+@keyframes rev-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.rev-track{animation:none}.rev-marquee{overflow-x:auto}}
+.rev-m{margin:0 12px 0 0;width:250px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.rev-q{font-family:'Archivo',sans-serif;font-weight:600;font-size:18px;line-height:1.3}
+.rev-m figcaption{margin-top:auto;display:flex;flex-direction:column;gap:2px}
+.rev-m .rev-name{font-size:15px}.rev-m .rev-src{font-size:12px}
+.recenzije .wrap{padding-top:80px;padding-bottom:80px;display:grid;grid-template-columns:380px 1fr;gap:64px;align-items:start}
+.rev-head{display:flex;flex-direction:column;gap:16px}
+.rev-score{display:flex;align-items:center;gap:16px;margin-top:16px}
+.rev-score-num{font-family:'Archivo',sans-serif;font-weight:800;font-size:52px;line-height:1}
+.rev-score-meta{display:flex;flex-direction:column;gap:6px;font-size:14px;color:#B8B5AE}
+.stars{display:flex;gap:3px}
+.rev-link{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;height:52px;padding:0 24px;margin-top:16px;border:1px solid rgba(246,245,242,.5);border-radius:6px;color:#F6F5F2;text-decoration:none;font-weight:600;font-size:16px;transition:background .25s ease,color .25s ease}
+.rev-link:hover{background:#F6F5F2;color:#1B1B1A}
+.rev-list{display:flex;flex-direction:column;gap:16px}
+.rev-card{background:#F6F5F2;color:#1B1B1A;border:1px solid #E2E0DB;border-radius:6px;transition:background .2s ease,transform .3s ease}
+.rev-card:hover{background:#fff;transform:scale(1.02)}
+.rev-main{margin:0;padding:40px;display:flex;flex-direction:column;gap:24px}
+.rev-main blockquote{margin:0;font-family:'Archivo',sans-serif;font-weight:600;font-size:30px;line-height:1.3;letter-spacing:-.01em}
+.rev-main figcaption,.rev-small{display:flex;flex-direction:column;gap:2px}
+.rev-name{font-weight:600;font-size:17px}
+.rev-src{font-size:14px;color:#5B5A56}
+.rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rev-small{padding:24px;gap:10px}
+
 /* KONTAKT */
-.kontakt{background:#F6F5F2;border-bottom:1px solid #E2E0DB}
+.kontakt{background:#fff;border-bottom:1px solid #E2E0DB}
 .kontakt .wrap{padding-top:80px;padding-bottom:80px;display:flex;flex-direction:column;gap:56px}
 .kontakt .section-title{font-size:48px}
 .k-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
@@ -125,10 +159,17 @@ html{scroll-padding-top:0}
 .k-map{border:1px solid #E2E0DB;border-radius:6px;overflow:hidden}
 .k-map iframe{border:0;display:block;width:100%;height:340px}
 
+/* CALL BUTTON */
+.call-fab{position:fixed;right:24px;bottom:24px;z-index:150;width:60px;height:60px;border-radius:50%;background:#C2570B;border:2px solid transparent;display:flex;align-items:center;justify-content:center;transition:border-color .25s ease}
+.call-fab:hover{border-color:#fff}
+
 /* FOOTER */
-.site-footer{background:#161615;color:#D6D4CE}
-.site-footer .wrap{padding:28px 24px 24px;text-align:center}
+.site-footer{background:#1B1B1A;color:#D6D4CE}
+.site-footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.footer-logo{display:flex;align-items:center;background:#fff;padding:8px 12px;border-radius:6px}
+.footer-logo img{height:36px;width:auto}
 .site-footer p{margin:0;font-size:14px;color:#9A978F}
+@media(max-width:1300px){.site-footer .wrap{padding-right:104px}}
 
 /* ========== RESPONSIVE ========== */
 @media(max-width:768px){
@@ -146,8 +187,9 @@ html{scroll-padding-top:0}
   .hero h1{font-size:42px}
   .hero-desc{font-size:17px}
   .hero-actions{flex-direction:column;gap:24px;width:100%}
-  .hero-btns{flex-direction:column;gap:10px;width:100%}
-  .btn-cta,.btn-ghost{justify-content:center;width:100%}
+  .hero-btns{gap:10px;width:100%}
+  .btn-cta,.btn-ghost{flex:1;justify-content:center;height:52px;padding:0 8px;font-size:15px}
+  .call-fab{right:16px;bottom:16px;width:56px;height:56px}
   .hero-stats{justify-content:center;gap:48px}
   .stat-icon{width:44px;height:44px}
   .stat-num{font-size:20px}
@@ -165,6 +207,19 @@ html{scroll-padding-top:0}
   .o-nama .wrap{padding-top:64px;padding-bottom:64px}
   .o-nama-grid{grid-template-columns:1fr;gap:32px}
 
+  .recenzije .wrap{padding-top:64px;padding-bottom:64px;grid-template-columns:minmax(0,1fr);gap:28px}
+  .rev-head{display:grid;grid-template-columns:1fr auto;align-items:end;column-gap:16px;row-gap:12px}
+  .rev-head .section-label{grid-column:1/-1}
+  .recenzije .section-title{font-size:30px}
+  .rev-score{margin-top:0;display:grid;grid-template-columns:auto auto;align-items:center;justify-items:end;column-gap:8px;row-gap:6px}
+  .rev-score-num{font-size:34px}
+  .rev-score-meta{display:contents}
+  .rev-score-meta span{grid-column:1/-1;font-size:12px}
+  .rev-score .stars svg{width:14px;height:14px}
+  .rev-head .rev-link,.rev-list{display:none}
+  .rev-mobile{display:block}
+  .rev-link.rev-link-m{display:flex;align-self:stretch;justify-content:center;margin-top:0}
+
   .kontakt .wrap{padding-top:64px;padding-bottom:64px;gap:32px}
   .kontakt .section-title{font-size:34px}
   .k-cards{grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:10px}
@@ -172,7 +227,10 @@ html{scroll-padding-top:0}
   .k-card-value{font-size:14px}
   .k-map iframe{height:240px}
 
-  .site-footer .wrap{padding:28px 16px 24px}
+  .site-footer .wrap{padding:28px 16px;gap:12px}
+  .footer-logo{padding:6px 10px}
+  .footer-logo img{height:28px}
+  .site-footer p{font-size:12px;text-align:right}
 }
 </style>
 </head>
@@ -214,9 +272,8 @@ html{scroll-padding-top:0}
   <div class="hero-inner">
     <div class="wrap hero-wrap">
       <div class="hero-text">
-        <div class="hero-label">Početna</div>
-        <h1>Zotovic profil<br>PVC i ALU stolarija</h1>
-        <p class="hero-desc">Kvalitet, dugotrajnost i savršen dizajn za vaš dom ili poslovni prostor</p>
+        <h1>PVC i ALU stolarija po meri, sa ugradnjom</h1>
+        <p class="hero-desc">Prozori, vrata i fasade izrađeni i ugrađeni od strane našeg tima. Besplatno merenje, garancija na ugradnju.</p>
       </div>
       <div class="hero-actions">
         <div class="hero-btns">
@@ -450,6 +507,96 @@ html{scroll-padding-top:0}
   </div>
 </section>
 
+<!-- RECENZIJE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="star" viewBox="0 0 24 24"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"/></symbol></svg>
+<section id="recenzije" class="recenzije">
+  <div class="wrap">
+    <div class="rev-head">
+      <div class="section-label">Recenzije</div>
+      <h2 class="section-title">Šta kažu naši klijenti</h2>
+      <div class="rev-score">
+        <span class="rev-score-num">4,3</span>
+        <div class="rev-score-meta">
+          <div class="stars" aria-label="Prosečna ocena 4,3 od 5">
+            <svg width="20" height="20" fill="#C2570B"><use href="#star"/></svg><svg width="20" height="20" fill="#C2570B"><use href="#star"/></svg><svg width="20" height="20" fill="#C2570B"><use href="#star"/></svg><svg width="20" height="20" fill="#C2570B"><use href="#star"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#5B5A56"><use href="#star"/></svg>
+          </div>
+          <span>6 recenzija na Google mapama</span>
+        </div>
+      </div>
+      <a href="https://maps.app.goo.gl/JHqBcYafDoTjPVsn6" target="_blank" rel="noopener" class="rev-link">Sve recenzije na Google mapama
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><polyline points="8,7 17,7 17,16"/></svg>
+      </a>
+    </div>
+    <div class="rev-list">
+      <figure class="rev-card rev-main">
+        <div class="stars" aria-label="Ocena 5 od 5">
+          <svg width="18" height="18" fill="#C2570B"><use href="#star"/></svg><svg width="18" height="18" fill="#C2570B"><use href="#star"/></svg><svg width="18" height="18" fill="#C2570B"><use href="#star"/></svg><svg width="18" height="18" fill="#C2570B"><use href="#star"/></svg><svg width="18" height="18" fill="#C2570B"><use href="#star"/></svg>
+        </div>
+        <blockquote>„Vrhunski kvalitet, usluga besprekorna, sve preporuke!”</blockquote>
+        <figcaption>
+          <span class="rev-name">Vladan Prokopović</span>
+          <span class="rev-src">Recenzija na Google mapama</span>
+        </figcaption>
+      </figure>
+      <div class="rev-grid">
+        <div class="rev-card rev-small">
+          <div class="stars" aria-label="Ocena 5 od 5">
+            <svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg>
+          </div>
+          <span class="rev-name">Vanja Vujić</span>
+          <span class="rev-src">Ocena 5/5 na Google mapama</span>
+        </div>
+        <div class="rev-card rev-small">
+          <div class="stars" aria-label="Ocena 5 od 5">
+            <svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg>
+          </div>
+          <span class="rev-name">Ognjen Vukašinović</span>
+          <span class="rev-src">Ocena 5/5 na Google mapama</span>
+        </div>
+      </div>
+    </div>
+    <div class="rev-mobile">
+      <div class="rev-marquee">
+        <div class="rev-track">
+          <figure class="rev-card rev-m">
+            <div class="stars"><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg></div>
+            <div class="rev-q">„Vrhunski kvalitet, usluga besprekorna, sve preporuke!”</div>
+            <figcaption><span class="rev-name">Vladan Prokopović</span><span class="rev-src">Recenzija na Google mapama</span></figcaption>
+          </figure>
+          <figure class="rev-card rev-m">
+            <div class="stars"><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg></div>
+            <div class="rev-q">Ocena 5/5</div>
+            <figcaption><span class="rev-name">Vanja Vujić</span><span class="rev-src">Google mape</span></figcaption>
+          </figure>
+          <figure class="rev-card rev-m">
+            <div class="stars"><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg></div>
+            <div class="rev-q">Ocena 5/5</div>
+            <figcaption><span class="rev-name">Ognjen Vukašinović</span><span class="rev-src">Google mape</span></figcaption>
+          </figure>
+          <figure class="rev-card rev-m" aria-hidden="true">
+            <div class="stars"><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg></div>
+            <div class="rev-q">„Vrhunski kvalitet, usluga besprekorna, sve preporuke!”</div>
+            <figcaption><span class="rev-name">Vladan Prokopović</span><span class="rev-src">Recenzija na Google mapama</span></figcaption>
+          </figure>
+          <figure class="rev-card rev-m" aria-hidden="true">
+            <div class="stars"><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg></div>
+            <div class="rev-q">Ocena 5/5</div>
+            <figcaption><span class="rev-name">Vanja Vujić</span><span class="rev-src">Google mape</span></figcaption>
+          </figure>
+          <figure class="rev-card rev-m" aria-hidden="true">
+            <div class="stars"><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg></div>
+            <div class="rev-q">Ocena 5/5</div>
+            <figcaption><span class="rev-name">Ognjen Vukašinović</span><span class="rev-src">Google mape</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <a href="https://maps.app.goo.gl/JHqBcYafDoTjPVsn6" target="_blank" rel="noopener" class="rev-link rev-link-m">Sve recenzije na Google mapama
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><polyline points="8,7 17,7 17,16"/></svg>
+    </a>
+  </div>
+</section>
+
 <!-- KONTAKT -->
 <section id="kontakt" class="kontakt">
   <div class="wrap">
@@ -488,9 +635,14 @@ html{scroll-padding-top:0}
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="wrap">
+    <a href="#top" class="footer-logo"><img src="images/logo.webp" alt="Zprofil" width="140" height="56"></a>
     <p>&copy; 2026 Zotović profil d.o.o.</p>
   </div>
 </footer>
+
+<a href="tel:+381638664220" class="call-fab" aria-label="Pozovite nas">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+</a>
 
 <script>
 (function(){
@@ -521,6 +673,21 @@ html{scroll-padding-top:0}
   mobNav.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click', closeMenu);
   });
+
+  // Call button stops above the footer on mobile
+  var fab = document.querySelector('.call-fab');
+  var footer = document.querySelector('.site-footer');
+  var mobileMq = window.matchMedia('(max-width: 768px)');
+  var fabTicking = false;
+  function placeFab(){
+    fabTicking = false;
+    var shift = mobileMq.matches ? Math.max(0, window.innerHeight - footer.getBoundingClientRect().top) : 0;
+    fab.style.transform = shift ? 'translateY(' + (-shift) + 'px)' : '';
+  }
+  function requestFab(){ if (!fabTicking) { fabTicking = true; requestAnimationFrame(placeFab); } }
+  window.addEventListener('scroll', requestFab, {passive: true});
+  window.addEventListener('resize', requestFab);
+  placeFab();
 
   // Exclusive accordion
   var accItems = document.querySelectorAll('.acc');
