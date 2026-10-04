@@ -37,14 +37,14 @@ a{color:#A84A08}a:hover{color:#7E3706}
 html{scroll-padding-top:0}
 .hero{position:relative;overflow:hidden;min-height:100vh;border-bottom:1px solid #E2E0DB}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(22,22,21,.88) 0%,rgba(22,22,21,.72) 50%,rgba(22,22,21,.45) 100%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(22,22,21,.75) 0%,rgba(22,22,21,.6) 50%,rgba(22,22,21,.75) 100%)}
 .hero-inner{position:relative;height:100%;min-height:calc(100vh - 89px);display:flex;flex-direction:column;justify-content:center}
-.hero-wrap{display:flex;flex-direction:column;justify-content:center;gap:28px;flex:1}
-.hero-text{display:flex;flex-direction:column;gap:28px;max-width:600px}
+.hero-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;flex:1;text-align:center}
+.hero-text{display:flex;flex-direction:column;align-items:center;gap:24px;max-width:900px}
 .hero-label{font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#E8944A}
-.hero h1{margin:0;font-family:'Archivo',sans-serif;font-weight:800;font-size:72px;line-height:1.02;letter-spacing:-.02em;color:#fff}
-.hero-desc{margin:0;max-width:34em;color:#D6D4CE;font-size:19px;line-height:1.6}
-.hero-actions{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+.hero h1{margin:0;font-family:'Archivo',sans-serif;font-weight:800;font-size:100px;line-height:1.02;letter-spacing:-.02em;color:#fff}
+.hero-desc{margin:0;color:#D6D4CE;font-size:24px;line-height:1.6}
+.hero-actions{display:flex;flex-direction:column;align-items:center;gap:32px;margin-top:8px}
 .hero-btns{display:flex;gap:12px;flex-shrink:0}
 .btn-cta{display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 28px;background:#C2570B;color:#fff;border:2px solid transparent;border-radius:6px;text-decoration:none;font-weight:600;font-size:17px;white-space:nowrap;transition:border-color .25s ease}
 .btn-cta:hover{border-color:#fff;color:#fff}
@@ -183,18 +183,15 @@ html{scroll-padding-top:0}
 
   .hero{min-height:100vh;min-height:100svh}
   .hero-inner{min-height:calc(100vh - 73px);min-height:calc(100svh - 73px)}
-  .hero-overlay{background:linear-gradient(to bottom,rgba(22,22,21,.85) 0%,rgba(22,22,21,.65) 60%,rgba(22,22,21,.5) 100%)}
-  .hero h1{font-size:42px}
-  .hero-desc{font-size:17px}
-  .hero-actions{flex-direction:column;gap:24px;width:100%}
+  .hero-overlay{background:linear-gradient(to bottom,rgba(22,22,21,.75) 0%,rgba(22,22,21,.6) 50%,rgba(22,22,21,.75) 100%)}
+  .hero h1{font-size:44px}
+  .hero-desc{font-size:16px}
+  .hero-actions{gap:24px;width:100%}
   .hero-btns{gap:10px;width:100%}
   .btn-cta,.btn-ghost{flex:1;justify-content:center;height:52px;padding:0 8px;font-size:15px}
   .call-fab{right:16px;bottom:16px;width:56px;height:56px}
-  .hero-stats{justify-content:center;gap:48px}
-  .stat-icon{width:44px;height:44px}
-  .stat-num{font-size:20px}
 
-  .section-title{font-size:34px}
+  .section-title{font-size:30px}
 
   .usluge .wrap{padding-top:64px;padding-bottom:64px;gap:32px}
   .svc-grid{display:none}
@@ -272,29 +269,13 @@ html{scroll-padding-top:0}
   <div class="hero-inner">
     <div class="wrap hero-wrap">
       <div class="hero-text">
-        <h1>PVC i ALU stolarija po meri, sa ugradnjom</h1>
-        <p class="hero-desc">Prozori, vrata i fasade izrađeni i ugrađeni od strane našeg tima. Besplatno merenje, garancija na ugradnju.</p>
+        <h1>PVC i ALU stolarija po meri sa ugradnjom</h1>
+        <p class="hero-desc">Kvalitet, dugotrajnost i savršen dizajn za vaš dom ili poslovni prostor.</p>
       </div>
       <div class="hero-actions">
         <div class="hero-btns">
           <a href="#kontakt" class="btn-cta">Zatražite ponudu</a>
           <a href="#usluge" class="btn-ghost">Pogledajte usluge</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="stat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-            </div>
-            <div class="stat-num">15+</div>
-            <div class="stat-lbl">godina rada</div>
-          </div>
-          <div class="stat">
-            <div class="stat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-            </div>
-            <div class="stat-num">1000+</div>
-            <div class="stat-lbl">završenih projekata</div>
-          </div>
         </div>
       </div>
     </div>
