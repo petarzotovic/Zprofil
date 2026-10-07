@@ -152,23 +152,6 @@ html{scroll-padding-top:0}
 .dot{width:8px;height:8px;border-radius:50%;background:#CFCCC5;border:none;padding:0;cursor:pointer;transition:width .3s ease, background .3s ease, border-radius .3s ease}
 .dot.active{width:22px;border-radius:4px;background:#C2570B}
 
-/* O NAMA */
-.o-nama{background:#fff;border-bottom:1px solid #E2E0DB}
-.o-nama .wrap{padding-top:96px;padding-bottom:96px}
-.o-nama-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:center}
-.o-nama-text{display:flex;flex-direction:column;gap:24px}
-.o-nama-text p{margin:0;color:#4A4946}
-.o-nama-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));order:-1}
-.stat{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:40px 24px}
-.stat:nth-child(odd){border-right:1px solid #D9D7D2}
-.stat:nth-child(-n+2){border-bottom:1px solid #D9D7D2}
-.stat-num{font-family:'Archivo',sans-serif;font-weight:800;font-size:56px;line-height:1;letter-spacing:-.02em;color:#1B1B1A}
-.stat-num em{font-style:normal;color:#C2570B}
-.stat-sub{font-size:.5em;letter-spacing:0}
-.stat-acc{color:#C2570B}
-.o-nama-btn{align-self:flex-start;margin-top:8px}
-.stat-num .stat-sub{color:#1B1B1A}
-.stat-lbl{font-size:17px;line-height:1.4;color:#4A4946}
 
 /* RECENZIJE */
 .recenzije{background:#F6F5F2;border-bottom:1px solid #E2E0DB}
@@ -299,15 +282,6 @@ html{scroll-padding-top:0}
   .proj-grid{display:none}
   .proj-slider{display:flex;flex-direction:column;gap:16px}
 
-  .o-nama .wrap{padding-top:64px;padding-bottom:64px}
-  .o-nama-grid{grid-template-columns:1fr;gap:12px}
-  .o-nama-text{display:contents}
-  .o-nama-stats{order:1;margin:16px 0}
-  .o-nama-btn{order:2;align-self:stretch;justify-content:center;font-size:15px;margin-top:0}
-  .stat{padding:22px 12px}
-  .stat-num{font-size:32px}
-  .stat-lbl{font-size:14px}
-  .o-nama-text p{font-size:16px}
 
   .recenzije .wrap{padding-top:64px;padding-bottom:64px;grid-template-columns:minmax(0,1fr);gap:28px}
   .rev-head{display:grid;grid-template-columns:1fr auto;align-items:end;column-gap:16px;row-gap:12px}
@@ -371,7 +345,7 @@ html{scroll-padding-top:0}
       </div>
       <a href="#fasade">Fasade</a>
       <a href="#projekti">Projekti</a>
-      <a href="#o-nama">O nama</a>
+      <a href="o-nama.html">O nama</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
     <button class="hamburger" type="button" aria-label="Meni">
@@ -395,7 +369,7 @@ html{scroll-padding-top:0}
   </details>
   <a href="#fasade">Fasade</a>
   <a href="#projekti">Projekti</a>
-  <a href="#o-nama">O nama</a>
+  <a href="o-nama.html">O nama</a>
   <a href="#kontakt">Kontakt</a>
 </nav>
 
@@ -588,27 +562,6 @@ html{scroll-padding-top:0}
       </div>
     </div>
     <a href="projekti.html" class="rev-link proj-all proj-all-m">Vidi sve projekte <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg></a>
-  </div>
-</section>
-
-<!-- O NAMA -->
-<section id="o-nama" class="o-nama">
-  <div class="wrap">
-    <div class="o-nama-grid">
-      <div class="o-nama-text">
-        <div class="section-label">O nama</div>
-        <h2 class="section-title">Od 2007. iz Bačkog Petrovca</h2>
-        <p>Zprofil je 2007. godine osnovao [IME VLASNIKA], koji i danas vodi firmu. Imamo sopstvenu radionicu i sopstveni montažni tim, i autorizovani smo Rehau partner.</p>
-        <p>Radimo u Novom Sadu i celoj Vojvodini, a najveći deo posla dobijamo po preporuci zadovoljnih kupaca.</p>
-        <a href="o-nama.html" class="btn-line o-nama-btn">Saznajte više o nama <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg></a>
-      </div>
-      <div class="o-nama-stats">
-        <div class="stat"><span class="stat-num stat-acc">20 <em class="stat-sub">godina</em></span><span class="stat-lbl">rada firme</span></div>
-        <div class="stat"><span class="stat-num">2500<em>+</em></span><span class="stat-lbl">završenih projekata</span></div>
-        <div class="stat"><span class="stat-num">Naš <em>tim</em></span><span class="stat-lbl">sami pravimo, ugrađujemo i servisiramo</span></div>
-        <div class="stat"><span class="stat-num stat-acc">5 <em class="stat-sub">godina</em></span><span class="stat-lbl">garancije na stolariju i ugradnju</span></div>
-      </div>
-    </div>
   </div>
 </section>
 
