@@ -3,803 +3,752 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zprofil — PVC i ALU stolarija | Bački Petrovac</title>
-<meta name="description" content="Zprofil — PVC i ALU stolarija, roletne, portali, klizni sistemi i fasadne obloge. Bački Petrovac. Pozovite 063 866 4220.">
+<title>Zprofil | PVC i ALU stolarija po meri sa ugradnjom</title>
+<meta name="description" content="Zotović profil, Bački Petrovac: PVC i ALU stolarija po meri sa ugradnjom i ventilisane fasade. Novi Sad i cela Vojvodina. Tel. 063 866 4220.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
 <style>
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:#1B1B1A;background:#fff;font-size:18px;line-height:1.6}
-img{max-width:100%;height:auto;display:block}
+@media (min-width: 1200px){
+body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:#1B1B1A;background:#FFFFFF}
 a{color:#A84A08}a:hover{color:#7E3706}
-
-.wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 24px}
-
-/* HEADER */
-.site-header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #E2E0DB}
-.site-header .wrap{height:88px;display:flex;align-items:center;justify-content:space-between;gap:32px}
-.logo{display:flex;align-items:center}
-.logo img{height:56px;width:auto}
-.nav{display:flex;gap:40px;font-size:16px;font-weight:500}
-.nav a{color:#1B1B1A;text-decoration:none}
-.nav{align-items:center}
-.nav a:hover{color:#C2570B}
-.dd{position:relative}
-.dd-btn{display:flex;align-items:center;gap:6px;background:none;border:none;padding:0;font:inherit;color:#1B1B1A;cursor:pointer}
-.dd-btn:hover,.dd:focus-within .dd-btn{color:#C2570B}
-.dd-chev{transition:transform .2s ease}
-.dd:hover .dd-chev,.dd:focus-within .dd-chev{transform:rotate(180deg)}
-.dd-menu{position:absolute;top:100%;left:-20px;padding-top:14px;z-index:400;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease,visibility .2s}
+.svc{transition:background 0.2s ease, transform 0.3s ease}.svc:hover{background:#F6F5F2;transform:scale(1.03)}
+.btn-cta{transition:border-color 0.25s ease}.btn-cta:hover{border:2px solid #FFFFFF}
+.btn-ghost{transition:background 0.25s ease, color 0.25s ease}.btn-ghost:hover{background:#FFFFFF;color:#1B1B1A}
+.k-card{background:#FFFFFF;transition:background 0.2s ease, transform 0.3s ease}.k-card:hover{background:#F6F5F2;transform:scale(1.03)}
+.rev-card{background:#FFFFFF;transition:border-color 0.2s ease, transform 0.3s ease}.rev-card:hover{border-color:#C2570B !important;transform:scale(1.02)}
+.rev-link{transition:background 0.25s ease, color 0.25s ease}.rev-link:hover{background:#F6F5F2 !important;color:#1B1B1A !important}
+.call-fab{position:absolute;right:24px;bottom:12px;z-index:300;width:60px;height:60px;border-radius:50%;background:#C2570B;border:2px solid transparent;display:flex;align-items:center;justify-content:center;box-sizing:border-box;transition:border-color 0.25s ease}.call-fab:hover{border-color:#FFFFFF}
+.proj{transition:transform 0.3s ease}.proj:hover{transform:scale(1.03)}
+.dd-btn:hover,.dd:focus-within .dd-btn{color:#C2570B !important}
+.dd-chev{transition:transform 0.2s ease}.dd:hover .dd-chev,.dd:focus-within .dd-chev{transform:rotate(180deg)}
+.dd-menu{position:absolute;top:100%;left:-20px;padding-top:14px;z-index:400;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity 0.2s ease, transform 0.2s ease, visibility 0.2s}
 .dd:hover .dd-menu,.dd:focus-within .dd-menu{opacity:1;visibility:visible;transform:none}
-.dd-box{min-width:220px;padding:8px 0;background:#fff;border:1px solid #E2E0DB;border-radius:6px;display:flex;flex-direction:column}
-.dd-box a{display:block;padding:10px 20px;font-size:16px;color:#1B1B1A;text-decoration:none;transition:background .15s ease,color .15s ease}
+.dd-box{min-width:220px;padding:8px 0;background:#FFFFFF;border:1px solid #E2E0DB;border-radius:6px;display:flex;flex-direction:column}
+.dd-box a{display:block;padding:10px 20px;font-size:16px;font-weight:500;color:#1B1B1A;text-decoration:none;transition:background 0.15s ease, color 0.15s ease}
 .dd-box a:hover{background:#F6F5F2;color:#C2570B}
-.mob-sub{border-bottom:1px solid #E2E0DB}
-.mob-sub summary{list-style:none;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-size:18px;font-weight:500;color:#1B1B1A;cursor:pointer}
-.mob-sub summary::-webkit-details-marker{display:none}
-.mob-sub[open] summary .dd-chev{transform:rotate(180deg)}
-.mob-nav .mob-sub a{display:block;padding:12px 24px 12px 40px;font-size:16px;border-bottom:none;border-top:1px solid #F0EEEA}
-.hamburger{display:none;width:48px;height:48px;align-items:center;justify-content:center;background:#fff;border:none;border-radius:6px;padding:0;cursor:pointer}
-.mob-nav{position:fixed;top:72px;left:0;width:100%;max-height:0;background:#fff;border-bottom:1px solid #E2E0DB;z-index:200;display:none;flex-direction:column;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1)}
-.mob-nav.open{max-height:70vh;overflow-y:auto}
-.mob-nav a{color:#1B1B1A;text-decoration:none;font-size:18px;font-weight:500;padding:14px 24px;border-bottom:1px solid #E2E0DB;transition:color .2s ease}
-.mob-nav a:hover{color:#C2570B}
-.mob-overlay{position:fixed;inset:0;background:rgba(22,22,21,.4);z-index:199;opacity:0;visibility:hidden;display:none;transition:opacity .35s ease,visibility .35s ease}
-.mob-overlay.open{opacity:1;visibility:visible}
-
-/* HERO */
-html{scroll-padding-top:0}
-.hero{position:relative;overflow:hidden;min-height:100vh;border-bottom:1px solid #E2E0DB}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(22,22,21,.75) 0%,rgba(22,22,21,.6) 50%,rgba(22,22,21,.75) 100%)}
-.hero-inner{position:relative;height:100%;min-height:calc(100vh - 89px);display:flex;flex-direction:column;justify-content:center}
-.hero-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;flex:1;text-align:center}
-.hero-text{display:flex;flex-direction:column;align-items:center;gap:24px;max-width:900px}
-.hero h1{margin:0;font-family:'Archivo',sans-serif;font-weight:800;font-size:100px;line-height:1.02;letter-spacing:-.02em;color:#fff}
-.hero-desc{margin:0;color:#D6D4CE;font-size:24px;line-height:1.6}
-.hero-actions{display:flex;flex-direction:column;align-items:center;gap:32px;margin-top:8px}
-.hero-btns{display:flex;gap:12px;flex-shrink:0}
-.btn-cta{display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 28px;background:#C2570B;color:#fff;border:2px solid transparent;border-radius:6px;text-decoration:none;font-weight:600;font-size:17px;white-space:nowrap;transition:border-color .25s ease}
-.btn-cta:hover{border-color:#fff;color:#fff}
-.btn-ghost{display:inline-flex;align-items:center;height:56px;padding:0 28px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:6px;text-decoration:none;font-weight:600;font-size:17px;white-space:nowrap;transition:background .25s ease,color .25s ease}
-.btn-ghost:hover{background:#fff;color:#1B1B1A}
-
-/* SECTION COMMON */
-.section-label{font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#A84A08}
-.section-title{margin:0;font-family:'Archivo',sans-serif;font-weight:700;font-size:56px;line-height:1.08;letter-spacing:-.01em}
-
-/* USLUGE */
-.usluge{border-bottom:1px solid #E2E0DB}
-.usluge .wrap{padding-top:80px;padding-bottom:80px;display:flex;flex-direction:column;gap:56px}
-.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:64px}
-.btn-line{display:inline-flex;align-items:center;gap:8px;height:52px;padding:0 24px;border:1px solid #1B1B1A;border-radius:6px;color:#1B1B1A;text-decoration:none;font-weight:600;font-size:16px;white-space:nowrap;flex-shrink:0;transition:background .25s ease,color .25s ease}
-.btn-line:hover{background:#1B1B1A;color:#fff}
-.btn-line-m{display:none}
-.rev-link.proj-all{margin-top:0;align-self:auto;flex-shrink:0;white-space:nowrap}
-.rev-link.proj-all-m{align-self:center;margin-top:0}
-.proj-head{display:flex;justify-content:center;text-align:center}
-.projekti .proj-fig figcaption{align-items:center;text-align:center}
-.prod-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.prod{min-height:400px;padding:40px 32px 36px;border:1px solid #E2E0DB;border-radius:6px;background:#fff;display:flex;flex-direction:column;gap:20px;text-decoration:none;color:#1B1B1A;transition:border-color .25s ease,transform .3s ease}
-.prod:hover{border-color:#C2570B;transform:translateY(-6px);color:#1B1B1A}
-.prod-ic{width:72px;height:72px;border-radius:50%;background:#F6F5F2;display:flex;align-items:center;justify-content:center;transition:background .25s ease}
-.prod-ic svg{transition:stroke .25s ease}
-.prod:hover .prod-ic{background:#C2570B}
-.prod:hover .prod-ic svg{stroke:#fff}
-.prod h3{margin:8px 0 0;font-family:'Archivo',sans-serif;font-weight:700;font-size:24px;line-height:1.25}
-.prod p{margin:0;font-size:17px;line-height:1.6;color:#4A4946}
-.prod-more{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;color:#A84A08}
-.prod-more svg{transition:transform .25s ease}
-.prod:hover .prod-more svg{transform:translateX(5px)}
-@media(max-width:1100px){.prod-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.svc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #E2E0DB;border-left:1px solid #E2E0DB}
-.svc{padding:32px 28px 36px;border-right:1px solid #E2E0DB;border-bottom:1px solid #E2E0DB;display:flex;flex-direction:column;gap:16px;transition:background .2s ease, transform .3s ease}
-.svc:hover{background:#F6F5F2;transform:scale(1.03)}
-.proj-fig{transition:transform .3s ease}
-.proj-fig:hover{transform:scale(1.03)}
-.svc h3{margin:0;font-family:'Archivo',sans-serif;font-weight:700;font-size:21px;line-height:1.25}
-.svc p{margin:0;font-size:16px;line-height:1.55;color:#4A4946}
-
-/* USLUGE ACCORDION (mobile) */
-.acc-list{display:none;flex-direction:column;border-top:1px solid #E2E0DB}
-.acc{border-bottom:1px solid #E2E0DB}
-.acc summary{list-style:none;display:flex;align-items:center;gap:14px;padding:18px 2px;cursor:pointer}
-.acc summary::-webkit-details-marker{display:none}
-.acc-title{flex:1;font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;line-height:1.25}
-.acc-plus{font-size:22px;font-weight:700;color:#1B1B1A;line-height:1;flex-shrink:0;transition:transform .2s ease}
-.acc[open] .acc-plus{transform:rotate(45deg)}
-.acc p{margin:0;font-size:15px;line-height:1.55;color:#4A4946;overflow:hidden;max-height:0;opacity:0;padding:0 2px 0 46px;transition:max-height .35s ease, opacity .3s ease, padding .35s ease}
+.prod{background:#FFFFFF;border:1px solid #E2E0DB;transition:border-color 0.25s ease, transform 0.3s ease, background 0.25s ease}.prod:hover{border-color:#C2570B;transform:translateY(-6px)}
+.prod-ic{background:#F6F5F2;transition:background 0.25s ease}.prod-ic svg{transition:stroke 0.25s ease}.prod:hover .prod-ic{background:#C2570B}.prod:hover .prod-ic svg{stroke:#FFFFFF}
+.prod-more svg{transition:transform 0.25s ease}.prod:hover .prod-more svg{transform:translateX(5px)}
+.btn-line{transition:background 0.25s ease, color 0.25s ease}.btn-line:hover{background:#1B1B1A !important;color:#FFFFFF !important}
+.faq summary{list-style:none;color:#F6F5F2}.faq summary::-webkit-details-marker{display:none}
+.faq-plus{transition:transform 0.2s ease}.faq[open] .faq-plus{transform:rotate(45deg)}
+.faq p{overflow:hidden;max-height:0;opacity:0;padding:0 48px 0 2px;transition:max-height 0.35s ease, opacity 0.3s ease, padding 0.35s ease}
+.faq[open] p{max-height:240px;opacity:1;padding:0 48px 24px 2px}
+.hdr{border-bottom:1px solid;transition:background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease}
+.hdr.top{background:transparent;border-bottom-color:transparent;box-shadow:none}
+.hdr.solid{background:#FFFFFF;border-bottom-color:#E2E0DB;box-shadow:0 6px 20px rgba(22,22,21,0.08)}
+.hdr nav > a,.hdr .dd-btn{transition:color 0.3s ease}
+.hdr.top nav > a,.hdr.top .dd-btn{color:#FFFFFF !important}
+.hdr.top nav > a:hover,.hdr.top .dd-btn:hover,.hdr.top .dd:focus-within .dd-btn{color:#F2B183 !important}
+}
+@media (max-width: 1199.98px){
+body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:#1B1B1A;background:#FFFFFF}
+a{color:#A84A08}a:hover{color:#7E3706}
+.svc{transition:background 0.2s ease}.svc:hover{background:#F6F5F2}
+.btn-cta{transition:border-color 0.25s ease}.btn-cta:hover{border:2px solid #FFFFFF}
+.btn-ghost{transition:background 0.25s ease, color 0.25s ease}.btn-ghost:hover{background:#FFFFFF;color:#1B1B1A}
+.acc summary{list-style:none}.acc summary::-webkit-details-marker{display:none}
+.acc-plus{transition:transform 0.2s ease}.acc[open] .acc-plus{transform:rotate(45deg)}
+.acc p{overflow:hidden;max-height:0;opacity:0;transition:max-height 0.35s ease, opacity 0.3s ease, padding 0.35s ease;padding:0 2px 0 46px}
 .acc[open] p{max-height:200px;opacity:1;padding:0 2px 20px 46px}
-
-/* FASADE */
-.fasade{background:#F6F5F2;border-bottom:1px solid #E2E0DB}
-.fasade .wrap{padding-top:80px;padding-bottom:80px}
-.fasade-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:stretch}
-.fasade .section-title{white-space:nowrap}
-@media(max-width:1100px) and (min-width:769px){.fasade .section-title{white-space:normal}}
-.fasade-text{display:flex;flex-direction:column;align-items:flex-end;text-align:right;gap:16px}
-.fasade-text p{margin:0;font-size:20px;line-height:1.5;color:#4A4946}
-.fasade-btn{align-self:flex-end;margin-top:auto}
-.fasade-ph{height:480px}
-.fasade-wrap{align-self:flex-end;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
-.fasade-wrap p{width:0;min-width:100%;text-align:right}
-.mat-mini{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
-.mat-mini li{display:flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-weight:600;font-size:20px;color:#1B1B1A}
-.mat-mini li::before{content:"";width:8px;height:8px;border-radius:50%;background:#C2570B;flex-shrink:0}
-
-/* PROJEKTI */
-.projekti{background:#1B1B1A;border-bottom:1px solid #E2E0DB}
-.projekti .section-title{color:#F6F5F2}
-.projekti figcaption{color:#fff}
-.projekti .wrap{padding-top:80px;padding-bottom:80px;display:flex;flex-direction:column;gap:56px}
-.proj-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.proj-fig{margin:0;display:flex;flex-direction:column;gap:14px}
-.proj-placeholder{height:400px;background:#D9D7D2;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:24px}
-.proj-placeholder span{font-size:13px;font-weight:600;letter-spacing:.12em;color:#4A4946;text-align:center}
-.proj-fig figcaption{display:flex;flex-direction:column;gap:2px}
-.proj-fig .proj-name{font-weight:600;font-size:17px}
-.proj-fig .proj-meta{font-size:15px;color:#5B5A56}
-
-/* PROJEKTI SLIDER (mobile) */
-.proj-slider{display:none}
-.slider-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
-.slider-track::-webkit-scrollbar{display:none}
-.slider-track .proj-fig{flex:0 0 100%;scroll-snap-align:start}
-.slider-track .proj-placeholder{height:260px}
-.proj-dots{display:flex;justify-content:center;align-items:center;gap:8px;height:8px}
-.dot{width:8px;height:8px;border-radius:50%;background:#CFCCC5;border:none;padding:0;cursor:pointer;transition:width .3s ease, background .3s ease, border-radius .3s ease}
+.prod{background:#FFFFFF;border:1px solid #E2E0DB;transition:border-color 0.25s ease, transform 0.3s ease}.prod:hover{border-color:#C2570B;transform:translateY(-4px)}
+.prod-ic{background:#F6F5F2;transition:background 0.25s ease}.prod-ic svg{transition:stroke 0.25s ease}.prod:hover .prod-ic{background:#C2570B}.prod:hover .prod-ic svg{stroke:#FFFFFF}
+.prod-more svg{transition:transform 0.25s ease}.prod:hover .prod-more svg{transform:translateX(5px)}
+.btn-line{transition:background 0.25s ease, color 0.25s ease}.btn-line:hover{background:#1B1B1A !important;color:#FFFFFF !important}
+.acc.faq summary{color:#F6F5F2}
+.acc.faq p{padding:0 2px 0 2px}.acc.faq[open] p{padding:0 2px 20px 2px}
+.slider{scrollbar-width:none;scroll-behavior:smooth}.slider::-webkit-scrollbar{display:none}
+.dot{width:8px;height:8px;border-radius:50%;background:#CFCCC5;transition:width 0.3s ease, background 0.3s ease, border-radius 0.3s ease;cursor:pointer;border:none;padding:0}
 .dot.active{width:22px;border-radius:4px;background:#C2570B}
-
-
-/* RECENZIJE */
-.recenzije{background:#F6F5F2;border-bottom:1px solid #E2E0DB}
-.recenzije .section-title,.rev-score-num{color:#1B1B1A}
-.recenzije .rev-link{border-color:#1B1B1A;color:#1B1B1A}
-.recenzije .rev-link:hover{background:#1B1B1A;color:#fff}
-.rev-mobile,.rev-link.rev-link-m{display:none}
-.rev-marquee{overflow:hidden;margin:0 -16px;padding:6px 0}
-.rev-track{display:flex;width:max-content;animation:rev-scroll 24s linear infinite}
-.rev-marquee:hover .rev-track{animation-play-state:paused}
-@keyframes rev-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.rev-track{animation:none}.rev-marquee{overflow-x:auto}}
-.rev-m{margin:0 12px 0 0;width:250px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.mob-nav{position:absolute;top:0;right:0;width:55%;height:100%;background:#FFFFFF;border-left:1px solid #E2E0DB;z-index:200;display:flex;flex-direction:column;padding:100px 24px 32px;gap:8px;opacity:0;pointer-events:none;transition:opacity .35s ease}
+.mob-nav.open{opacity:1;pointer-events:auto}
+.mob-nav a{color:#1B1B1A;text-decoration:none;font-size:16px;font-weight:500;padding:14px 0;border-bottom:1px solid #E2E0DB;display:block}
+.mob-overlay{position:absolute;inset:0;background:rgba(22,22,21,0.4);z-index:199;opacity:0;pointer-events:none;transition:opacity .35s ease}
+.mob-overlay.open{opacity:1}
+.k-card{background:#FFFFFF;transition:background 0.2s ease, transform 0.3s ease}.k-card:hover{background:#F6F5F2;transform:scale(1.03)}
+.rev-card{background:#FFFFFF;transition:border-color 0.2s ease, transform 0.3s ease}.rev-card:hover{border-color:#C2570B !important;transform:scale(1.02)}
+.rev-link{transition:background 0.25s ease, color 0.25s ease}.rev-link:hover{background:#F6F5F2 !important;color:#1B1B1A !important}
+.rev-marquee{overflow:hidden;margin:0 -16px;padding:6px 0;touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}
+.rev-track{display:flex;width:max-content;will-change:transform}
+.rev-m{margin:0 12px 0 0;width:250px;padding:20px;border:1px solid #E2E0DB;border-radius:6px;display:flex;flex-direction:column;gap:14px;box-sizing:border-box;color:#1B1B1A}
+.rev-stars{display:flex;gap:2px}
 .rev-q{font-family:'Archivo',sans-serif;font-weight:600;font-size:18px;line-height:1.3}
 .rev-m figcaption{margin-top:auto;display:flex;flex-direction:column;gap:2px}
-.rev-m .rev-name{font-size:15px}.rev-m .rev-src{font-size:12px}
-.recenzije .wrap{padding-top:80px;padding-bottom:80px;display:grid;grid-template-columns:380px 1fr;gap:64px;align-items:start}
-.rev-head{display:flex;flex-direction:column;gap:16px}
-.rev-score{display:flex;align-items:center;gap:16px;margin-top:16px}
-.rev-score-num{font-family:'Archivo',sans-serif;font-weight:800;font-size:52px;line-height:1}
-.rev-score-meta{display:flex;flex-direction:column;gap:6px;font-size:14px;color:#5B5A56}
-.stars{display:flex;gap:3px}
-.rev-link{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;height:52px;padding:0 24px;margin-top:16px;border:1px solid rgba(246,245,242,.5);border-radius:6px;color:#F6F5F2;text-decoration:none;font-weight:600;font-size:16px;transition:background .25s ease,color .25s ease}
-.rev-link:hover{background:#F6F5F2;color:#1B1B1A}
-.rev-list{display:flex;flex-direction:column;gap:16px}
-.rev-card{background:#fff;color:#1B1B1A;border:1px solid #E2E0DB;border-radius:6px;transition:border-color .2s ease,transform .3s ease}
-.rev-card:hover{border-color:#C2570B;transform:scale(1.02)}
-.rev-main{margin:0;padding:40px;display:flex;flex-direction:column;gap:24px}
-.rev-main blockquote{margin:0;font-family:'Archivo',sans-serif;font-weight:600;font-size:30px;line-height:1.3;letter-spacing:-.01em}
-.rev-main figcaption,.rev-small{display:flex;flex-direction:column;gap:2px}
-.rev-name{font-weight:600;font-size:17px}
-.rev-src{font-size:14px;color:#5B5A56}
-.rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.rev-small{padding:24px;gap:10px}
-
-/* CESTA PITANJA */
-.pitanja{background:#1B1B1A;border-bottom:1px solid #E2E0DB}
-.pitanja .wrap{padding-top:80px;padding-bottom:80px;display:flex;flex-direction:column;gap:48px}
-.pitanja-head{display:flex;flex-direction:column;gap:16px}
-.pitanja .section-title{color:#F6F5F2}
-.faq-list{display:flex;flex-direction:column;border-top:1px solid rgba(246,245,242,.18)}
-.faq-list .acc{border-bottom-color:rgba(246,245,242,.18)}
-.faq-list .acc-title,.faq-list .acc-plus{color:#F6F5F2}
-.faq-list .acc p{color:#B8B5AE}
-.faq-list .acc summary{gap:16px;padding:24px 2px}
-.faq-list .acc-title{font-size:21px;line-height:1.3}
-.faq-list .acc-plus{font-size:24px}
-.faq-list .acc p{font-size:16px;line-height:1.6;padding:0 48px 0 2px}
-.faq-list .acc[open] p{max-height:240px;padding:0 48px 24px 2px}
-
-/* KONTAKT */
-.kontakt{background:#fff;border-bottom:1px solid #E2E0DB}
-.kontakt .wrap{padding-top:80px;padding-bottom:80px;display:flex;flex-direction:column;gap:56px}
-.kontakt .section-title{font-size:48px}
-.k-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.k-card{padding:16px 14px;border:1px solid #E2E0DB;border-radius:6px;background:#fff;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit;transition:background .2s ease, transform .3s ease}
-.k-card:hover{background:#F6F5F2;transform:scale(1.03)}
-.k-card-label{font-size:11px;color:#5B5A56;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
-.k-card-value{font-family:'Archivo',sans-serif;font-weight:700;font-size:15px;color:#1B1B1A}
-.k-map{border:1px solid #E2E0DB;border-radius:6px;overflow:hidden}
-.k-map iframe{border:0;display:block;width:100%;height:340px}
-
-/* CALL BUTTON */
-.call-fab{position:fixed;right:24px;bottom:24px;z-index:150;width:60px;height:60px;border-radius:50%;background:#C2570B;border:2px solid transparent;display:flex;align-items:center;justify-content:center;transition:border-color .25s ease}
-.call-fab:hover{border-color:#fff}
-
-/* FOOTER */
-.site-footer{background:#1B1B1A;color:#D6D4CE}
-.site-footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.footer-logo{display:flex;align-items:center;background:#fff;padding:8px 12px;border-radius:6px}
-.footer-logo img{height:36px;width:auto}
-.site-footer p{margin:0;font-size:14px;color:#9A978F}
-@media(max-width:1300px){.site-footer .wrap{padding-right:104px}}
-
-/* ========== RESPONSIVE ========== */
-@media(max-width:768px){
-  .wrap{padding:0 16px}
-  .site-header .wrap{height:72px}
-  .logo img{height:44px}
-  .nav{display:none}
-  .hamburger{display:flex}
-  .mob-nav{display:flex}
-  .mob-overlay{display:block}
-
-  .hero{min-height:100vh;min-height:100svh}
-  .hero-inner{min-height:calc(100vh - 73px);min-height:calc(100svh - 73px)}
-  .hero h1{font-size:44px}
-  .hero-desc{font-size:16px}
-  .hero-actions{gap:24px;width:100%}
-  .hero-btns{gap:10px;width:100%}
-  .btn-cta,.btn-ghost{flex:1;justify-content:center;height:52px;padding:0 8px;font-size:15px}
-  .call-fab{right:16px;bottom:16px;width:56px;height:56px}
-
-  .section-title{font-size:30px}
-
-  .usluge .wrap{padding-top:64px;padding-bottom:64px;gap:32px}
-  .sec-head .btn-line{display:none}
-  .btn-line-m{display:flex;justify-content:center;font-size:15px}
-  .sec-head .proj-all{display:none}
-  .rev-link.proj-all-m{display:flex;align-self:stretch;justify-content:center;font-size:15px}
-  .svc-grid{display:none}
-  .prod-grid{grid-template-columns:1fr;gap:12px}
-  .prod{min-height:0;padding:24px 20px;gap:12px}
-  .prod:hover{transform:translateY(-4px)}
-  .prod-ic{width:56px;height:56px}
-  .prod-ic svg{width:30px;height:30px}
-  .prod h3{margin-top:4px;font-size:18px;line-height:1.3}
-  .prod p{font-size:15px;line-height:1.55}
-  .prod-more{margin-top:4px;font-size:15px}
-  .acc-list{display:flex}
-  #proizvodi .acc-list{display:none}
-
-  .fasade .wrap{padding-top:64px;padding-bottom:64px}
-  .fasade-grid{display:flex;flex-direction:column;gap:12px}
-  .fasade-ph{order:1;margin:12px 0}
-  .fasade-text{display:contents}
-  .fasade-text .fasade-btn{order:2}
-  .fasade-text{gap:12px;align-items:stretch;text-align:left}
-  .fasade-text p{font-size:16px;line-height:1.6}
-  .fasade-ph{height:240px}
-  .fasade-wrap{display:contents}
-  .fasade-wrap p{width:auto;min-width:0;text-align:left}
-  .mat-mini{align-items:flex-start;gap:8px}
-  .mat-mini li{font-size:16px}
-  .fasade-btn{align-self:stretch;justify-content:center;font-size:15px}
-
-  .projekti .wrap{padding-top:64px;padding-bottom:64px;gap:32px}
-  .proj-grid{display:none}
-  .proj-slider{display:flex;flex-direction:column;gap:16px}
-
-
-  .recenzije .wrap{padding-top:64px;padding-bottom:64px;grid-template-columns:minmax(0,1fr);gap:28px}
-  .rev-head{display:grid;grid-template-columns:1fr auto;align-items:end;column-gap:16px;row-gap:12px}
-  .rev-head .section-label{grid-column:1/-1}
-  .recenzije .section-title{font-size:30px}
-  .rev-score{margin-top:0;display:grid;grid-template-columns:auto auto;align-items:center;justify-items:end;column-gap:8px;row-gap:6px}
-  .rev-score-num{font-size:34px}
-  .rev-score-meta{display:contents}
-  .rev-score-meta span{grid-column:1/-1;font-size:12px}
-  .rev-score .stars svg{width:14px;height:14px}
-  .rev-head .rev-link,.rev-list{display:none}
-  .rev-mobile{display:block}
-  .rev-link.rev-link-m{display:flex;align-self:stretch;justify-content:center;margin-top:0}
-
-  .pitanja .wrap{padding-top:64px;padding-bottom:64px;gap:24px}
-  .pitanja-head{gap:12px}
-  .faq-list .acc summary{gap:14px;padding:18px 2px}
-  .faq-list .acc-title{font-size:16px}
-  .faq-list .acc-plus{font-size:18px}
-  .faq-list .acc p{font-size:15px;line-height:1.55;padding:0 2px}
-  .faq-list .acc[open] p{padding:0 2px 20px}
-
-  .kontakt .wrap{padding-top:64px;padding-bottom:64px;gap:32px}
-  .kontakt .section-title{font-size:34px}
-  .k-cards{grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:10px}
-  .k-card{padding:14px 12px}
-  .k-card-value{font-size:14px}
-  .k-map iframe{height:240px}
-
-  .site-footer .wrap{padding:28px 16px;gap:12px}
-  .footer-logo{padding:6px 10px}
-  .footer-logo img{height:28px}
-  .site-footer p{font-size:12px;text-align:right}
+.rev-n{font-weight:600;font-size:15px}.rev-s{font-size:13px;color:#5B5A56}
+.call-fab{position:absolute;right:16px;bottom:112px;z-index:300;width:56px;height:56px;border-radius:50%;background:#C2570B;border:2px solid transparent;display:flex;align-items:center;justify-content:center;box-sizing:border-box;transition:border-color 0.25s ease}.call-fab:hover{border-color:#FFFFFF}
+.hdr{border-bottom:1px solid;transition:background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease}
+.hdr.top{background:transparent;border-bottom-color:transparent;box-shadow:none}
+.hdr.solid{background:#FFFFFF;border-bottom-color:#E2E0DB;box-shadow:0 6px 20px rgba(22,22,21,0.08)}
+.burger{transition:background-color 0.3s ease}.burger svg{transition:stroke 0.3s ease}
+.hdr.top .burger{background:transparent !important}.hdr.top .burger svg{stroke:#FFFFFF}
+.burger{cursor:pointer}.burger .ic-x{display:none}.burger.open .ic-x{display:block}.burger.open .ic-menu{display:none}
+.mnav{position:absolute;top:100%;left:0;right:0;z-index:2;background:#FFFFFF;border-top:1px solid #E2E0DB;box-shadow:0 16px 32px rgba(22,22,21,0.14);padding:8px 16px 24px;max-height:calc(100vh - 73px);overflow-y:auto;box-sizing:border-box;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity 0.25s ease, transform 0.25s ease, visibility 0.25s}
+.mnav.open{opacity:1;visibility:visible;transform:none}
+.mnav-ov{position:absolute;top:100%;left:0;width:100%;height:100vh;z-index:1;margin:0;padding:0;border:none;background:rgba(22,22,21,0.45);opacity:0;visibility:hidden;transition:opacity 0.25s ease, visibility 0.25s}
+.mnav-ov.open{opacity:1;visibility:visible}
+.mnav-l{display:flex;align-items:center;justify-content:space-between;min-height:54px;padding:0 4px;border-bottom:1px solid #E2E0DB;color:#1B1B1A;text-decoration:none;font-family:'Archivo',sans-serif;font-weight:600;font-size:18px}
+.mnav-l:hover{color:#C2570B}
+.mnav-chev{transition:transform 0.2s ease}.mnav-p.open{color:#C2570B}.mnav-p.open .mnav-chev{transform:rotate(180deg)}
+.msub{display:flex;flex-direction:column;overflow:hidden;max-height:0;background:#F6F5F2;border-radius:6px;transition:max-height 0.3s ease, margin 0.3s ease}
+.msub.open{max-height:320px;margin:8px 0}
+.msub a{display:flex;align-items:center;min-height:46px;padding:0 16px;color:#1B1B1A;text-decoration:none;font-size:16px;font-weight:500}
+.msub a:hover{color:#C2570B}
 }
 </style>
 </head>
 <body>
+<div class="v-d">
+<div style="position: relative; width: 100%; display: flex; flex-direction: column; background: #FFFFFF; color: #1B1B1A; font-family: 'IBM Plex Sans', sans-serif; font-size: 18px; line-height: 1.6">
 
-<div id="top"></div>
-<!-- HEADER -->
-<header class="site-header">
-  <div class="wrap">
-    <a href="#top" class="logo">
-      <img src="images/logo.webp" alt="Zprofil" width="140" height="56">
-    </a>
-    <nav class="nav">
-      <a href="#top">Početna</a>
-      <div class="dd">
-        <button type="button" class="dd-btn" aria-haspopup="true">Proizvodi
-          <svg class="dd-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg>
-        </button>
-        <div class="dd-menu">
-          <div class="dd-box">
-            <a href="#proizvodi">Prozori</a>
-            <a href="#proizvodi">Vrata</a>
-            <a href="#proizvodi">Klizni sistemi</a>
-            <a href="#proizvodi">Portali</a>
-            <a href="#proizvodi">Dodatna oprema</a>
+  <!-- HEADER -->
+  <header class="hdr top" style="position: sticky; top: 0; z-index: 350; margin-bottom: -89px">
+    <div style="width: 1100px; margin: 0 auto; height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 32px">
+      <a href="#top" style="display: flex; align-items: center">
+        <img class="hdr-logo" src="img/logo.png" alt="Zprofil - ALU i PVC stolarija" style="height: 56px; width: auto; display: block">
+      </a>
+      <nav style="display: flex; align-items: center; gap: 40px; font-size: 20px; font-weight: 500">
+        <a href="#top" style="color: #1B1B1A; text-decoration: none">Početna</a>
+        <div class="dd" style="position: relative">
+          <a href="proizvodi.html" class="dd-btn" aria-haspopup="true" style="display: flex; align-items: center; gap: 6px; text-decoration: none; color: #1B1B1A; cursor: pointer">Proizvodi
+            <svg class="dd-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"></polyline></svg>
+          </a>
+          <div class="dd-menu">
+            <div class="dd-box">
+              <a href="prozori.html">Prozori</a>
+              <a href="vrata.html">Vrata</a>
+              <a href="klizni-sistemi.html">Klizni sistemi</a>
+              <a href="portali.html">Portali</a>
+              <a href="dodatna-oprema.html">Dodatna oprema</a>
+            </div>
           </div>
         </div>
-      </div>
-      <a href="#fasade">Fasade</a>
-      <a href="#projekti">Projekti</a>
-      <a href="o-nama.html">O nama</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-    <button class="hamburger" type="button" aria-label="Meni">
-      <svg class="ham-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-      <svg class="ham-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="1.8" stroke-linecap="round" style="display:none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
-    </button>
-  </div>
-</header>
-<div class="mob-overlay"></div>
-<nav class="mob-nav">
-  <a href="#top">Početna</a>
-  <details class="mob-sub">
-    <summary>Proizvodi
-      <svg class="dd-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg>
-    </summary>
-    <a href="#proizvodi">Prozori</a>
-    <a href="#proizvodi">Vrata</a>
-    <a href="#proizvodi">Klizni sistemi</a>
-    <a href="#proizvodi">Portali</a>
-    <a href="#proizvodi">Dodatna oprema</a>
-  </details>
-  <a href="#fasade">Fasade</a>
-  <a href="#projekti">Projekti</a>
-  <a href="o-nama.html">O nama</a>
-  <a href="#kontakt">Kontakt</a>
-</nav>
+        <a href="fasade.html" style="color: #1B1B1A; text-decoration: none">Fasade</a>
+        <a href="projekti.html" style="color: #1B1B1A; text-decoration: none">Projekti</a>
+        <a href="o-nama.html" style="color: #1B1B1A; text-decoration: none">O nama</a>
+        <a href="kontakt.html" style="color: #1B1B1A; text-decoration: none">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <img class="hero-bg" src="images/hero-bg.jpg" alt="">
-  <div class="hero-overlay"></div>
-  <div class="hero-inner">
-    <div class="wrap hero-wrap">
-      <div class="hero-text">
-        <h1>PVC i ALU stolarija po meri sa ugradnjom</h1>
-        <p class="hero-desc">Kvalitet, dugotrajnost i savršen dizajn za vaš dom ili poslovni prostor.</p>
+  <!-- HERO -->
+  <section id="top" style="position: relative; border-bottom: 1px solid #E2E0DB; overflow: hidden; height: 750px">
+    <img src="img/hero.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%">
+    <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,22,21,0.75) 0%, rgba(22,22,21,0.6) 50%, rgba(22,22,21,0.75) 100%)"></div>
+    <div style="position: relative; width: 1100px; margin: 0 auto; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; text-align: center">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 24px; max-width: 1000px">
+        <div style="display: flex; align-items: center; gap: 16px; font-size: 16px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #F2B183; white-space: nowrap">
+          <span style="width: 40px; height: 1px; background: #F2B183"></span>PVC i ALU stolarija po meri sa ugradnjom<span style="width: 40px; height: 1px; background: #F2B183"></span>
+        </div>
+        <h1 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 108px; line-height: 1.02; letter-spacing: -0.02em; color: #FFFFFF; max-width: 1000px">Čuvamo toplinu vašeg doma</h1>
+        <p style="margin: 0; color: #D6D4CE; font-size: 24px; line-height: 1.6; width: 591px; height: 81px">Kvalitet, dugotrajnost i savršen dizajn za vaš dom ili poslovni prostor.</p>
       </div>
-      <div class="hero-actions">
-        <div class="hero-btns">
-          <a href="#kontakt" class="btn-cta">Zatražite ponudu</a>
-          <a href="#proizvodi" class="btn-ghost">Pogledajte proizvode</a>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 32px; margin-top: 8px">
+        <div style="display: flex; gap: 12px">
+          <a href="#kontakt" class="btn-cta" style="display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 28px; background: #C2570B; color: #FFFFFF; border: 2px solid transparent; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 17px; box-sizing: border-box">Zatražite ponudu</a>
+          <a href="proizvodi.html" class="btn-ghost" style="display: inline-flex; align-items: center; height: 56px; padding: 0 28px; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.5); border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 17px; box-sizing: border-box">Pogledajte proizvode</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROIZVODI -->
-<section id="proizvodi" class="usluge">
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <div class="section-label">Proizvodi</div>
-        <h2 class="section-title" style="margin-top:16px">Naši proizvodi</h2>
-      </div>
-      <a href="#proizvodi" class="btn-line">Pogledaj sve
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg>
-      </a>
-    </div>
-
-    <!-- Desktop: grid -->
-    <div class="prod-grid">
-      <a href="#proizvodi" class="prod">
-        <span class="prod-ic"><svg width="38" height="38" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6"><rect x="6" y="4" width="24" height="28"/><line x1="18" y1="4" x2="18" y2="32"/><line x1="6" y1="18" x2="30" y2="18"/></svg></span>
-        <h3>PVC i ALU prozori</h3>
-        <p>PVC za kuće i stanove, ALU za velika staklena polja i poslovne objekte. Zadržavaju toplotu i buku napolju.</p>
-        <span class="prod-more">Saznaj više <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg></span>
-      </a>
-      <a href="#proizvodi" class="prod">
-        <span class="prod-ic"><svg width="38" height="38" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6"><rect x="8" y="3" width="20" height="30"/><rect x="12" y="7" width="12" height="14"/><line x1="23" y1="25" x2="23" y2="28"/></svg></span>
-        <h3>PVC i ALU vrata</h3>
-        <p>Ulazna i balkonska vrata po meri, od PVC ili ALU profila. Dobro zaptivaju i ne propuštaju hladnoću.</p>
-        <span class="prod-more">Saznaj više <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg></span>
-      </a>
-      <a href="#proizvodi" class="prod">
-        <span class="prod-ic"><svg width="38" height="38" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6"><rect x="3" y="6" width="30" height="24"/><line x1="18" y1="6" x2="18" y2="30"/><polyline points="22,18 28,18"/><polyline points="26,15.5 28.5,18 26,20.5"/></svg></span>
-        <h3>Klizni sistemi</h3>
-        <p>Za izlaz na terasu ili u dvorište. Krilo klizi uz zid i ne zauzima mesto u sobi.</p>
-        <span class="prod-more">Saznaj više <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg></span>
-      </a>
-      <a href="#proizvodi" class="prod">
-        <span class="prod-ic"><svg width="38" height="38" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6"><rect x="2" y="6" width="32" height="26"/><line x1="2" y1="12" x2="34" y2="12"/><rect x="14" y="16" width="8" height="16"/><line x1="8" y1="12" x2="8" y2="32"/><line x1="28" y1="12" x2="28" y2="32"/></svg></span>
-        <h3>Portali</h3>
-        <p>Ulazi za lokale, radnje i poslovne prostore. Vrata, staklo i ram pravimo kao jednu celinu.</p>
-        <span class="prod-more">Saznaj više <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg></span>
-      </a>
-    </div>
-
-    <!-- Mobile: accordion -->
-    <div class="acc-list">
-      <details class="acc">
-        <summary>
-          <svg width="30" height="30" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6" style="flex-shrink:0"><rect x="6" y="4" width="24" height="28"/><line x1="18" y1="4" x2="18" y2="32"/><line x1="6" y1="18" x2="30" y2="18"/></svg>
-          <span class="acc-title">PVC i ALU prozori</span>
-          <span class="acc-plus">+</span>
-        </summary>
-        <p>PVC za kuće i stanove, ALU za velika staklena polja i poslovne objekte. Zadržavaju toplotu i buku napolju.</p>
-      </details>
-      <details class="acc">
-        <summary>
-          <svg width="30" height="30" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6" style="flex-shrink:0"><rect x="8" y="3" width="20" height="30"/><rect x="12" y="7" width="12" height="14"/><line x1="23" y1="25" x2="23" y2="28"/></svg>
-          <span class="acc-title">PVC i ALU vrata</span>
-          <span class="acc-plus">+</span>
-        </summary>
-        <p>Ulazna i balkonska vrata po meri, od PVC ili ALU profila. Dobro zaptivaju i ne propuštaju hladnoću.</p>
-      </details>
-      <details class="acc">
-        <summary>
-          <svg width="30" height="30" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6" style="flex-shrink:0"><rect x="3" y="6" width="30" height="24"/><line x1="18" y1="6" x2="18" y2="30"/><polyline points="22,18 28,18"/><polyline points="26,15.5 28.5,18 26,20.5"/></svg>
-          <span class="acc-title">Klizni sistemi</span>
-          <span class="acc-plus">+</span>
-        </summary>
-        <p>Za izlaz na terasu ili u dvorište. Krilo klizi uz zid i ne zauzima mesto u sobi.</p>
-      </details>
-      <details class="acc">
-        <summary>
-          <svg width="30" height="30" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6" style="flex-shrink:0"><rect x="2" y="6" width="32" height="26"/><line x1="2" y1="12" x2="34" y2="12"/><rect x="14" y="16" width="8" height="16"/><line x1="8" y1="12" x2="8" y2="32"/><line x1="28" y1="12" x2="28" y2="32"/></svg>
-          <span class="acc-title">Portali</span>
-          <span class="acc-plus">+</span>
-        </summary>
-        <p>Ulazi za lokale, radnje i poslovne prostore. Vrata, staklo i ram pravimo kao jednu celinu.</p>
-      </details>
-    </div>
-    <a href="#proizvodi" class="btn-line btn-line-m">Pogledaj sve
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg>
-    </a>
-  </div>
-</section>
-
-<!-- FASADE -->
-<section id="fasade" class="fasade">
-  <div class="wrap">
-    <div class="fasade-grid">
-      <div class="proj-placeholder fasade-ph"><span>FOTOGRAFIJA: VENTILISANA FASADA</span></div>
-      <div class="fasade-text">
-        <div class="section-label">Fasade</div>
-        <div class="fasade-wrap">
-        <h2 class="section-title">Ventilisane fasade</h2>
-        <p>Pored stolarije, radimo i ventilisane fasade od Fundermax, Alubond i fibercement ploča, najčešće za manje poslovne objekte. Štite zid od vlage i daju objektu savremen izgled.</p>
-        <ul class="mat-mini"><li>Fundermax</li><li>Alubond</li><li>Fibercement</li></ul>
+  <!-- PROIZVODI -->
+  <section id="proizvodi" style="border-bottom: 1px solid #E2E0DB">
+    <div style="width: 1100px; margin: 0 auto; padding: 80px 0; display: flex; flex-direction: column; gap: 56px">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 64px">
+        <div style="display: flex; flex-direction: column; gap: 16px">
+          <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Proizvodi</div>
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 64px; line-height: 1.08; letter-spacing: -0.01em">Naši proizvodi</h2>
         </div>
-        <a href="#fasade" class="btn-line fasade-btn">Pogledajte fasade
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg>
+        <a href="proizvodi.html" class="btn-line" style="display: inline-flex; align-items: center; gap: 8px; height: 52px; padding: 0 24px; border: 1px solid #1B1B1A; border-radius: 6px; color: #1B1B1A; text-decoration: none; font-weight: 600; font-size: 16px; box-sizing: border-box; flex-shrink: 0">Pogledaj sve
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
+        </a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+        <a href="prozori.html" class="prod" style="min-height: 400px; padding: 40px 32px 36px; border-radius: 6px; display: flex; flex-direction: column; gap: 20px; text-decoration: none; color: #1B1B1A; box-sizing: border-box">
+          <span class="prod-ic" style="width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center"><svg width="38" height="38" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6"><rect x="6" y="4" width="24" height="28"></rect><line x1="18" y1="4" x2="18" y2="32"></line><line x1="6" y1="18" x2="30" y2="18"></line></svg></span>
+          <h3 style="margin: 8px 0 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.25">PVC i ALU prozori</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4946">PVC za kuće i stanove, ALU za velika staklena polja i poslovne objekte. Zadržavaju toplotu i buku napolju.</p>
+          <span class="prod-more" style="margin-top: auto; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 16px; color: #A84A08">Saznaj više <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></span>
+        </a>
+        <a href="vrata.html" class="prod" style="min-height: 400px; padding: 40px 32px 36px; border-radius: 6px; display: flex; flex-direction: column; gap: 20px; text-decoration: none; color: #1B1B1A; box-sizing: border-box">
+          <span class="prod-ic" style="width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center"><svg width="38" height="38" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6"><rect x="8" y="3" width="20" height="30"></rect><rect x="12" y="7" width="12" height="14"></rect><line x1="23" y1="25" x2="23" y2="28"></line></svg></span>
+          <h3 style="margin: 8px 0 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.25">PVC i ALU vrata</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4946">Ulazna i balkonska vrata po meri, od PVC ili ALU profila. Dobro zaptivaju i ne propuštaju hladnoću.</p>
+          <span class="prod-more" style="margin-top: auto; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 16px; color: #A84A08">Saznaj više <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></span>
+        </a>
+        <a href="klizni-sistemi.html" class="prod" style="min-height: 400px; padding: 40px 32px 36px; border-radius: 6px; display: flex; flex-direction: column; gap: 20px; text-decoration: none; color: #1B1B1A; box-sizing: border-box">
+          <span class="prod-ic" style="width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center"><svg width="38" height="38" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6"><rect x="3" y="6" width="30" height="24"></rect><line x1="18" y1="6" x2="18" y2="30"></line><polyline points="22,18 28,18"></polyline><polyline points="26,15.5 28.5,18 26,20.5"></polyline></svg></span>
+          <h3 style="margin: 8px 0 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.25">Klizni sistemi</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4946">Za izlaz na terasu ili u dvorište. Krilo klizi uz zid i ne zauzima mesto u sobi.</p>
+          <span class="prod-more" style="margin-top: auto; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 16px; color: #A84A08">Saznaj više <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></span>
+        </a>
+        <a href="portali.html" class="prod" style="min-height: 400px; padding: 40px 32px 36px; border-radius: 6px; display: flex; flex-direction: column; gap: 20px; text-decoration: none; color: #1B1B1A; box-sizing: border-box">
+          <span class="prod-ic" style="width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center"><svg width="38" height="38" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6"><rect x="2" y="6" width="32" height="26"></rect><line x1="2" y1="12" x2="34" y2="12"></line><rect x="14" y="16" width="8" height="16"></rect><line x1="8" y1="12" x2="8" y2="32"></line><line x1="28" y1="12" x2="28" y2="32"></line></svg></span>
+          <h3 style="margin: 8px 0 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.25">Portali</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4946">Ulazi za lokale, radnje i poslovne prostore. Vrata, staklo i ram pravimo kao jednu celinu.</p>
+          <span class="prod-more" style="margin-top: auto; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 16px; color: #A84A08">Saznaj više <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></span>
         </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROJEKTI -->
-<section id="projekti" class="projekti">
-  <div class="wrap">
-    <div class="proj-head">
-      <div>
-        <div class="section-label">Projekti</div>
-        <h2 class="section-title" style="margin-top:16px">Neki od projekata</h2>
+  <!-- FASADE -->
+  <section id="fasade" style="border-bottom: 1px solid #E2E0DB; background: #F6F5F2">
+    <div style="width: 1100px; margin: 0 auto; padding: 80px 0; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 64px; align-items: stretch">
+      <div style="height: 480px; background: #D9D7D2; border-radius: 4px; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: VENTILISANA FASADA</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-end; text-align: right; gap: 16px">
+        <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Fasade</div>
+        <div style="align-self: flex-end; display: flex; flex-direction: column; align-items: flex-start; gap: 16px">
+        <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 56px; line-height: 1.08; letter-spacing: -0.01em; white-space: nowrap">Ventilisane fasade</h2>
+        <p style="margin: 0; width: 0; min-width: 100%; text-align: right; font-size: 20px; line-height: 1.5; color: #4A4946">Pored stolarije, radimo i ventilisane fasade od Fundermax, Alubond i fibercement ploča, najčešće za manje poslovne objekte. Štite zid od vlage i daju objektu savremen izgled.</p>
+        <ul style="margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; align-items: flex-start; gap: 10px">
+          <li style="display: flex; align-items: center; gap: 10px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 20px; color: #1B1B1A"><span style="width: 8px; height: 8px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Fundermax</li>
+          <li style="display: flex; align-items: center; gap: 10px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 20px; color: #1B1B1A"><span style="width: 8px; height: 8px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Alubond</li>
+          <li style="display: flex; align-items: center; gap: 10px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 20px; color: #1B1B1A"><span style="width: 8px; height: 8px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Fibercement</li>
+        </ul>
+        </div>
+        <a href="fasade.html" class="btn-line" style="align-self: flex-end; margin-top: auto; display: inline-flex; align-items: center; gap: 8px; height: 52px; padding: 0 24px; border: 1px solid #1B1B1A; border-radius: 6px; color: #1B1B1A; text-decoration: none; font-weight: 600; font-size: 16px; box-sizing: border-box">Pogledajte fasade
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
+        </a>
       </div>
     </div>
+  </section>
 
-    <!-- Desktop: grid -->
-    <div class="proj-grid">
-      <figure class="proj-fig">
-        <div class="proj-placeholder"><span>FOTOGRAFIJA: PVC PROZORI NA PORODIČNOJ KUĆI</span></div>
-        <figcaption>
-          <span class="proj-name">PVC prozori i roletne</span>
-          <span class="proj-meta">[Mesto, godina]</span>
-        </figcaption>
-      </figure>
-      <figure class="proj-fig">
-        <div class="proj-placeholder"><span>FOTOGRAFIJA: ALU PORTAL LOKALA</span></div>
-        <figcaption>
-          <span class="proj-name">ALU portal</span>
-          <span class="proj-meta">[Mesto, godina]</span>
-        </figcaption>
-      </figure>
-      <figure class="proj-fig">
-        <div class="proj-placeholder"><span>FOTOGRAFIJA: FASADA SA ALUBOND OBLOGOM</span></div>
-        <figcaption>
-          <span class="proj-name">Alubond fasada</span>
-          <span class="proj-meta">[Mesto, godina]</span>
-        </figcaption>
-      </figure>
-    </div>
-
-    <!-- Mobile: slider -->
-    <div class="proj-slider">
-      <div class="slider-track">
-        <figure class="proj-fig">
-          <div class="proj-placeholder"><span>FOTOGRAFIJA: PVC PROZORI NA PORODIČNOJ KUĆI</span></div>
-          <figcaption>
-            <span class="proj-name">PVC prozori i roletne</span>
-            <span class="proj-meta">[Mesto, godina]</span>
-          </figcaption>
-        </figure>
-        <figure class="proj-fig">
-          <div class="proj-placeholder"><span>FOTOGRAFIJA: ALU PORTAL LOKALA</span></div>
-          <figcaption>
-            <span class="proj-name">ALU portal</span>
-            <span class="proj-meta">[Mesto, godina]</span>
-          </figcaption>
-        </figure>
-        <figure class="proj-fig">
-          <div class="proj-placeholder"><span>FOTOGRAFIJA: FASADA SA ALUBOND OBLOGOM</span></div>
-          <figcaption>
-            <span class="proj-name">Alubond fasada</span>
-            <span class="proj-meta">[Mesto, godina]</span>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="proj-dots">
-        <button class="dot active" aria-label="Slika 1"></button>
-        <button class="dot" aria-label="Slika 2"></button>
-        <button class="dot" aria-label="Slika 3"></button>
-      </div>
-    </div>
-    <a href="projekti.html" class="rev-link proj-all proj-all-m">Vidi sve projekte <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg></a>
-  </div>
-</section>
-
-<!-- RECENZIJE -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="star" viewBox="0 0 24 24"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"/></symbol></svg>
-<section id="recenzije" class="recenzije">
-  <div class="wrap">
-    <div class="rev-head">
-      <div class="section-label">Recenzije</div>
-      <h2 class="section-title">Šta kažu naši klijenti</h2>
-      <div class="rev-score">
-        <span class="rev-score-num">4,3</span>
-        <div class="rev-score-meta">
-          <div class="stars" aria-label="Prosečna ocena 4,3 od 5">
-            <svg width="20" height="20" fill="#C2570B"><use href="#star"/></svg><svg width="20" height="20" fill="#C2570B"><use href="#star"/></svg><svg width="20" height="20" fill="#C2570B"><use href="#star"/></svg><svg width="20" height="20" fill="#C2570B"><use href="#star"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#5B5A56"><use href="#star"/></svg>
-          </div>
-          <span>6 recenzija na Google mapama</span>
+  <!-- PROJEKTI -->
+  <section id="projekti" style="border-bottom: 1px solid #E2E0DB; background-color: #1b1b1a">
+    <div style="width: 1100px; margin: 0 auto; padding: 80px 0; display: flex; flex-direction: column; gap: 56px">
+      <div style="display: flex; justify-content: center; align-items: center; gap: 64px">
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+          <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Projekti</div>
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 64px; line-height: 1.08; letter-spacing: -0.01em; color: #F6F5F2">Neki od projekata</h2>
         </div>
       </div>
-      <a href="https://maps.app.goo.gl/JHqBcYafDoTjPVsn6" target="_blank" rel="noopener" class="rev-link">Sve recenzije na Google mapama
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><polyline points="8,7 17,7 17,16"/></svg>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+        <figure class="proj" style="margin: 0; display: flex; flex-direction: column; gap: 14px">
+          <div style="height: 400px; background: #D9D7D2; border-radius: 4px; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: PVC PROZORI NA PORODIČNOJ KUĆI</span>
+          </div>
+          <figcaption style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px; color: #ffffff">
+            <span style="font-weight: 600; font-size: 17px">PVC prozori i roletne</span>
+            <span style="font-size: 15px; color: #5B5A56">[Mesto, godina]</span>
+          </figcaption>
+        </figure>
+        <figure class="proj" style="margin: 0; display: flex; flex-direction: column; gap: 14px">
+          <div style="height: 400px; background: #D9D7D2; border-radius: 4px; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: ALU PORTAL LOKALA</span>
+          </div>
+          <figcaption style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px; color: #ffffff">
+            <span style="font-weight: 600; font-size: 17px">ALU portal</span>
+            <span style="font-size: 15px; color: #5B5A56">[Mesto, godina]</span>
+          </figcaption>
+        </figure>
+        <figure class="proj" style="margin: 0; display: flex; flex-direction: column; gap: 14px">
+          <div style="height: 400px; background: #D9D7D2; border-radius: 4px; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: FASADA SA ALUBOND OBLOGOM</span>
+          </div>
+          <figcaption style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px; color: #ffffff">
+            <span style="font-weight: 600; font-size: 17px">Alubond fasada</span>
+            <span style="font-size: 15px; color: #5B5A56">[Mesto, godina]</span>
+          </figcaption>
+        </figure>
+      </div>
+        <a href="projekti.html" class="rev-link" style="align-self: center; display: inline-flex; align-items: center; gap: 8px; height: 52px; padding: 0 24px; border: 1px solid rgba(246,245,242,0.5); border-radius: 6px; color: #F6F5F2; text-decoration: none; font-weight: 600; font-size: 16px; box-sizing: border-box; flex-shrink: 0">Vidi sve projekte <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></a>
+    </div>
+  </section>
+
+  <!-- O NAMA -->
+  
+
+  <!-- RECENZIJE -->
+  <section id="recenzije" style="border-bottom: 1px solid #E2E0DB; background-color: #F6F5F2">
+    <div style="width: 1100px; margin: 0 auto; padding: 80px 0; display: grid; grid-template-columns: 380px 1fr; gap: 64px; align-items: start">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Recenzije</div>
+        <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 56px; line-height: 1.08; letter-spacing: -0.01em; color: #1B1B1A">Šta kažu naši klijenti</h2>
+        <div style="display: flex; align-items: center; gap: 16px; margin-top: 16px">
+          <span style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 52px; line-height: 1; color: #1B1B1A">4,3</span>
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <div style="display: flex; gap: 3px">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#5B5A56"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg>
+            </div>
+            <span style="font-size: 14px; color: #5B5A56">6 recenzija na Google mapama</span>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/JHqBcYafDoTjPVsn6" target="_blank" rel="noopener" class="btn-line" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; height: 52px; padding: 0 24px; margin-top: 16px; border: 1px solid #1B1B1A; border-radius: 6px; color: #1B1B1A; text-decoration: none; font-weight: 600; font-size: 16px; box-sizing: border-box">Sve recenzije na Google mapama
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><polyline points="8,7 17,7 17,16"></polyline></svg>
+        </a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <figure class="rev-card" style="margin: 0; padding: 40px; border: 1px solid #E2E0DB; border-radius: 6px; display: flex; flex-direction: column; gap: 24px">
+          <div style="display: flex; gap: 3px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg>
+          </div>
+          <blockquote style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.3; letter-spacing: -0.01em">„Vrhunski kvalitet, usluga besprekorna, sve preporuke!”</blockquote>
+          <figcaption style="display: flex; flex-direction: column; gap: 2px">
+            <span style="font-weight: 600; font-size: 17px">Vladan Prokopović</span>
+            <span style="font-size: 14px; color: #5B5A56">Recenzija na Google mapama</span>
+          </figcaption>
+        </figure>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+          <div class="rev-card" style="padding: 24px; border: 1px solid #E2E0DB; border-radius: 6px; display: flex; flex-direction: column; gap: 12px">
+            <div style="display: flex; gap: 3px">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg>
+            </div>
+            <span style="font-weight: 600; font-size: 17px">Vanja Vujić</span>
+            <span style="font-size: 14px; color: #5B5A56">Ocena 5/5 na Google mapama</span>
+          </div>
+          <div class="rev-card" style="padding: 24px; border: 1px solid #E2E0DB; border-radius: 6px; display: flex; flex-direction: column; gap: 12px">
+            <div style="display: flex; gap: 3px">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg>
+            </div>
+            <span style="font-weight: 600; font-size: 17px">Ognjen Vukašinović</span>
+            <span style="font-size: 14px; color: #5B5A56">Ocena 5/5 na Google mapama</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CESTA PITANJA -->
+  <section id="pitanja" style="border-bottom: 1px solid #E2E0DB; background: #1b1b1a">
+    <div style="width: 1100px; margin: 0 auto; padding: 80px 0; display: flex; flex-direction: column; gap: 48px">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Pitanja</div>
+        <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 56px; line-height: 1.08; letter-spacing: -0.01em; color: #F6F5F2">Česta pitanja</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid rgba(246,245,242,0.18)">
+        <details class="faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 16px; padding: 24px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.3">Šta ulazi u cenu?</span>
+            <span class="faq-plus" style="font-size: 24px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B8B5AE">Izrada, demontaža starih prozora, odvoz šuta, ugradnja i klupice. Obradu špaletni ne radimo, nju treba dogovoriti sa molerom.</p>
+        </details>
+        <details class="faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 16px; padding: 24px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.3">Koliko se čeka?</span>
+            <span class="faq-plus" style="font-size: 24px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B8B5AE">Za standardne boje i oblike obično 10 do 15 dana. Za posebne boje i oblike rok dobijate u ponudi.</p>
+        </details>
+        
+        <details class="faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 16px; padding: 24px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.3">Gde radite?</span>
+            <span class="faq-plus" style="font-size: 24px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B8B5AE">U Novom Sadu i celoj Vojvodini. Za veće projekte van Vojvodine pozovite, pa ćemo se dogovoriti.</p>
+        </details>
+        <details class="faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 16px; padding: 24px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.3">Šta ako se posle par godina nešto pokvari?</span>
+            <span class="faq-plus" style="font-size: 24px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B8B5AE">Na stolariju i ugradnju dajemo 5 godina garancije. I posle toga izlazimo na teren, a manje intervencije uglavnom rešavamo bez naplate.</p>
+        </details>
+        <details class="faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 16px; padding: 24px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.3">Koji profil i staklo da izaberem?</span>
+            <span class="faq-plus" style="font-size: 24px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B8B5AE">Za najbolju izolaciju preporučujemo Rehau Synego sa troslojnim staklom. Euro-Design 70 je povoljnija opcija. Pošaljite nam mere i recite za šta vam treba, pa ćemo vam predložiti.</p>
+        </details>
+        <details class="faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 16px; padding: 24px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.3">Kako se plaća?</span>
+            <span class="faq-plus" style="font-size: 24px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B8B5AE">Avans od 50 do 60% pri potvrdi porudžbine, a ostatak po ugradnji. Plaćanje na rate ne nudimo.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" style="border-bottom: 1px solid #E2E0DB; background-color: transparent">
+    <div style="width: 1100px; margin: 0 auto; padding: 80px 0; display: flex; flex-direction: column; gap: 56px">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Kontakt</div>
+        <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 48px; line-height: 1.08; letter-spacing: -0.01em">Kontaktirajte nas</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px">
+        <a href="tel:+381638664220" class="k-card" style="padding: 16px 14px; border: 1px solid #E2E0DB; border-radius: 6px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: inherit">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg>
+          <div style="font-size: 11px; color: #5B5A56; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600">Telefon</div>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; color: #1B1B1A">063 866 4220</div>
+        </a>
+        <div class="k-card" style="padding: 16px 14px; border: 1px solid #E2E0DB; border-radius: 6px; display: flex; flex-direction: column; gap: 8px">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <div style="font-size: 11px; color: #5B5A56; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600">Adresa</div>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; color: #1B1B1A">Kosovska 35, Bački Petrovac</div>
+        </div>
+        <a href="mailto:info@zprofil.co.rs" class="k-card" style="padding: 16px 14px; border: 1px solid #E2E0DB; border-radius: 6px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: inherit">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <div style="font-size: 12px; color: #5B5A56; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600">Email</div>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px; color: #1B1B1A">info@zprofil.co.rs</div>
+        </a>
+        <div class="k-card" style="padding: 16px 14px; border: 1px solid #E2E0DB; border-radius: 6px; display: flex; flex-direction: column; gap: 8px">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline></svg>
+          <div style="font-size: 11px; color: #5B5A56; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600">Radno vreme</div>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 15px; color: #1B1B1A">Pon - sub, 08-15h</div>
+        </div>
+      </div>
+      <div style="border: 1px solid #E2E0DB; border-radius: 6px; overflow: hidden">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.5!2d19.5872!3d45.3567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDIxJzI0LjEiTiAxOcKwMzUnMTMuOSJF!5e0!3m2!1ssr!2srs!4v1" width="1100" height="340" style="border: 0; display: block; width: 100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer style="color: #D6D4CE; background-color: #1b1b1a">
+    <div style="width: 1100px; margin: 0 auto; padding: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+      <a href="#top" style="display: flex; align-items: center; background: #FFFFFF; padding: 8px 12px; border-radius: 6px">
+        <img src="img/logo.png" alt="Zprofil - ALU i PVC stolarija" style="height: 36px; width: auto; display: block">
+      </a>
+      <div style="font-size: 16px; color: #9A978F">© 2026 Zotović profil d.o.o.</div>
+    </div>
+  </footer>
+  <a href="tel:+381638664220" class="call-fab" aria-label="Pozovite nas">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg>
+  </a>
+</div>
+</div>
+<div class="v-m">
+<div style="position: relative; width: 100%; display: flex; flex-direction: column; background: #FFFFFF; color: #1B1B1A; font-family: 'IBM Plex Sans', sans-serif; font-size: 16px; line-height: 1.6">
+
+  <!-- HEADER -->
+  <header class="hdr top" style="position: sticky; top: 0; z-index: 350; margin-bottom: -73px">
+    <div style="height: 72px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+      <a href="#top" style="display: flex; align-items: center">
+        <img class="hdr-logo" src="img/logo.png" alt="Zprofil - ALU i PVC stolarija" style="height: 44px; width: auto; display: block">
+      </a>
+      <div style="display: flex; gap: 8px">
+        <button type="button" class="burger" aria-label="Otvori meni" aria-expanded="false" aria-controls="mob-meni" data-act="toggle" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: #FFFFFF; border-radius: 6px; padding: 0; border: none">
+          <svg class="ic-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>
+          <svg class="ic-x" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"></line><line x1="18" y1="6" x2="6" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+    <button type="button" class="mnav-ov" aria-label="Zatvori meni" tabindex="-1" data-act="close"></button>
+    <nav id="mob-meni" class="mnav" aria-label="Glavni meni">
+      <a href="#top" class="mnav-l" data-act="close">Početna</a>
+      <a href="proizvodi.html" class="mnav-l mnav-p" aria-expanded="false" data-act="prod">Proizvodi
+        <svg class="mnav-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"></polyline></svg>
+      </a>
+      <div class="msub">
+        <a href="prozori.html" data-act="close">Prozori</a>
+        <a href="vrata.html" data-act="close">Vrata</a>
+        <a href="klizni-sistemi.html" data-act="close">Klizni sistemi</a>
+        <a href="portali.html" data-act="close">Portali</a>
+        <a href="dodatna-oprema.html" data-act="close">Dodatna oprema</a>
+      </div>
+      <a href="fasade.html" class="mnav-l" data-act="close">Fasade</a>
+      <a href="projekti.html" class="mnav-l" data-act="close">Projekti</a>
+      <a href="o-nama.html" class="mnav-l" data-act="close">O nama</a>
+      <a href="kontakt.html" class="mnav-l" data-act="close">Kontakt</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" style="position: relative; border-bottom: 1px solid #E2E0DB; overflow: hidden; height: 680px">
+    <img src="img/hero.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%">
+    <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,22,21,0.75) 0%, rgba(22,22,21,0.6) 50%, rgba(22,22,21,0.75) 100%)"></div>
+    <div style="position: relative; height: 100%; padding: 0 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center">
+      <div style="max-width: 300px; margin-bottom: -8px; font-size: 13px; font-weight: 600; line-height: 1.5; letter-spacing: 0.12em; text-transform: uppercase; color: #F2B183">PVC i ALU stolarija po meri sa ugradnjom</div>
+      <h1 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 52px; line-height: 1.02; letter-spacing: -0.02em; color: #FFFFFF">Čuvamo toplinu vašeg doma</h1>
+      <p style="margin: 0; color: #D6D4CE; font-size: 16px; line-height: 1.6; max-width: 345px">Kvalitet, dugotrajnost i savršen dizajn za vaš dom ili poslovni prostor.</p>
+      <div style="display: flex; gap: 10px; margin-top: 4px">
+        <a href="#kontakt" class="btn-cta" style="flex: 1; display: flex; align-items: center; justify-content: center; height: 52px; padding: 0 8px; background: #C2570B; color: #FFFFFF; border: 2px solid transparent; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 15px; white-space: nowrap; box-sizing: border-box">Zatražite ponudu</a>
+        <a href="proizvodi.html" class="btn-ghost" style="flex: 1; display: flex; align-items: center; justify-content: center; height: 52px; padding: 0 8px; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.5); border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 15px; white-space: nowrap; box-sizing: border-box">Pogledajte proizvode</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROIZVODI -->
+  <section id="proizvodi" style="border-bottom: 1px solid #E2E0DB">
+    <div style="padding: 64px 16px; display: flex; flex-direction: column; gap: 32px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Proizvodi</div>
+        <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 30px; line-height: 1.1">Naši proizvodi</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <a href="prozori.html" class="prod" style="padding: 24px 20px; border-radius: 6px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: #1B1B1A; box-sizing: border-box">
+          <span class="prod-ic" style="width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6"><rect x="6" y="4" width="24" height="28"></rect><line x1="18" y1="4" x2="18" y2="32"></line><line x1="6" y1="18" x2="30" y2="18"></line></svg></span>
+          <h3 style="margin: 4px 0 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.25">PVC i ALU prozori</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4946">PVC za kuće i stanove, ALU za velika staklena polja i poslovne objekte. Zadržavaju toplotu i buku napolju.</p>
+          <span class="prod-more" style="margin-top: 4px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; color: #A84A08">Saznaj više <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></span>
+        </a>
+        <a href="vrata.html" class="prod" style="padding: 24px 20px; border-radius: 6px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: #1B1B1A; box-sizing: border-box">
+          <span class="prod-ic" style="width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6"><rect x="8" y="3" width="20" height="30"></rect><rect x="12" y="7" width="12" height="14"></rect><line x1="23" y1="25" x2="23" y2="28"></line></svg></span>
+          <h3 style="margin: 4px 0 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.25">PVC i ALU vrata</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4946">Ulazna i balkonska vrata po meri, od PVC ili ALU profila. Dobro zaptivaju i ne propuštaju hladnoću.</p>
+          <span class="prod-more" style="margin-top: 4px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; color: #A84A08">Saznaj više <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></span>
+        </a>
+        <a href="klizni-sistemi.html" class="prod" style="padding: 24px 20px; border-radius: 6px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: #1B1B1A; box-sizing: border-box">
+          <span class="prod-ic" style="width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6"><rect x="3" y="6" width="30" height="24"></rect><line x1="18" y1="6" x2="18" y2="30"></line><polyline points="22,18 28,18"></polyline><polyline points="26,15.5 28.5,18 26,20.5"></polyline></svg></span>
+          <h3 style="margin: 4px 0 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.25">Klizni sistemi</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4946">Za izlaz na terasu ili u dvorište. Krilo klizi uz zid i ne zauzima mesto u sobi.</p>
+          <span class="prod-more" style="margin-top: 4px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; color: #A84A08">Saznaj više <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></span>
+        </a>
+        <a href="portali.html" class="prod" style="padding: 24px 20px; border-radius: 6px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: #1B1B1A; box-sizing: border-box">
+          <span class="prod-ic" style="width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 36 36" fill="none" stroke="#C2570B" stroke-width="1.6"><rect x="2" y="6" width="32" height="26"></rect><line x1="2" y1="12" x2="34" y2="12"></line><rect x="14" y="16" width="8" height="16"></rect><line x1="8" y1="12" x2="8" y2="32"></line><line x1="28" y1="12" x2="28" y2="32"></line></svg></span>
+          <h3 style="margin: 4px 0 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.25">Portali</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4946">Ulazi za lokale, radnje i poslovne prostore. Vrata, staklo i ram pravimo kao jednu celinu.</p>
+          <span class="prod-more" style="margin-top: 4px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; color: #A84A08">Saznaj više <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></span>
+        </a>
+      </div>
+      <a href="proizvodi.html" class="btn-line" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 52px; border: 1px solid #1B1B1A; border-radius: 6px; color: #1B1B1A; text-decoration: none; font-weight: 600; font-size: 15px; box-sizing: border-box">Pogledaj sve
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
       </a>
     </div>
-    <div class="rev-list">
-      <figure class="rev-card rev-main">
-        <div class="stars" aria-label="Ocena 5 od 5">
-          <svg width="18" height="18" fill="#C2570B"><use href="#star"/></svg><svg width="18" height="18" fill="#C2570B"><use href="#star"/></svg><svg width="18" height="18" fill="#C2570B"><use href="#star"/></svg><svg width="18" height="18" fill="#C2570B"><use href="#star"/></svg><svg width="18" height="18" fill="#C2570B"><use href="#star"/></svg>
-        </div>
-        <blockquote>„Vrhunski kvalitet, usluga besprekorna, sve preporuke!”</blockquote>
-        <figcaption>
-          <span class="rev-name">Vladan Prokopović</span>
-          <span class="rev-src">Recenzija na Google mapama</span>
-        </figcaption>
-      </figure>
-      <div class="rev-grid">
-        <div class="rev-card rev-small">
-          <div class="stars" aria-label="Ocena 5 od 5">
-            <svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg>
+  </section>
+
+  <!-- FASADE -->
+  <section id="fasade" style="border-bottom: 1px solid #E2E0DB; background: #F6F5F2">
+    <div style="padding: 64px 16px; display: flex; flex-direction: column; gap: 24px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Fasade</div>
+        <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 30px; line-height: 1.1">Ventilisane fasade</h2>
+        <p style="margin: 4px 0 0; color: #4A4946">Pored stolarije, radimo i ventilisane fasade od Fundermax, Alubond i fibercement ploča, najčešće za manje poslovne objekte. Štite zid od vlage i daju objektu savremen izgled.</p>
+        <ul style="margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; column-gap: 16px; row-gap: 8px">
+          <li style="display: flex; align-items: center; gap: 10px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 16px; color: #1B1B1A"><span style="width: 8px; height: 8px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Fundermax</li>
+          <li style="display: flex; align-items: center; gap: 10px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 16px; color: #1B1B1A"><span style="width: 8px; height: 8px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Alubond</li>
+          <li style="display: flex; align-items: center; gap: 10px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 16px; color: #1B1B1A"><span style="width: 8px; height: 8px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Fibercement</li>
+        </ul>
+      </div>
+      <div style="height: 240px; background: #D9D7D2; border-radius: 4px; display: flex; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: VENTILISANA FASADA</span>
+      </div>
+      <a href="fasade.html" class="btn-line" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 52px; border: 1px solid #1B1B1A; border-radius: 6px; color: #1B1B1A; text-decoration: none; font-weight: 600; font-size: 15px; box-sizing: border-box">Pogledajte fasade
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- PROJEKTI -->
+  <section id="projekti" style="border-bottom: 1px solid #E2E0DB; background-color: #1b1b1a">
+    <div style="padding: 64px 16px; display: flex; flex-direction: column; gap: 32px">
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px">
+        <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Projekti</div>
+        <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 30px; line-height: 1.1; color: #ffffff">Neki od projekata</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+      <div class="slider" style="display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory">
+        <figure style="margin: 0; flex: 0 0 100%; scroll-snap-align: start; display: flex; flex-direction: column; gap: 12px">
+          <div style="height: 260px; background: #D9D7D2; border-radius: 4px; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: PVC PROZORI NA PORODIČNOJ KUĆI</span>
           </div>
-          <span class="rev-name">Vanja Vujić</span>
-          <span class="rev-src">Ocena 5/5 na Google mapama</span>
-        </div>
-        <div class="rev-card rev-small">
-          <div class="stars" aria-label="Ocena 5 od 5">
-            <svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg><svg width="16" height="16" fill="#C2570B"><use href="#star"/></svg>
+          <figcaption style="display: flex; flex-direction: column; gap: 2px; color: #ffffff">
+            <span style="font-weight: 600">PVC prozori i roletne</span>
+            <span style="font-size: 13px; color: #5B5A56">[Mesto, godina]</span>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0; flex: 0 0 100%; scroll-snap-align: start; display: flex; flex-direction: column; gap: 12px">
+          <div style="height: 260px; background: #D9D7D2; border-radius: 4px; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: ALU PORTAL LOKALA</span>
           </div>
-          <span class="rev-name">Ognjen Vukašinović</span>
-          <span class="rev-src">Ocena 5/5 na Google mapama</span>
+          <figcaption style="display: flex; flex-direction: column; gap: 2px">
+            <span style="font-weight: 600">ALU portal</span>
+            <span style="font-size: 13px; color: #5B5A56">[Mesto, godina]</span>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0; flex: 0 0 100%; scroll-snap-align: start; display: flex; flex-direction: column; gap: 12px">
+          <div style="height: 260px; background: #D9D7D2; border-radius: 4px; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: FASADA SA ALUBOND OBLOGOM</span>
+          </div>
+          <figcaption style="display: flex; flex-direction: column; gap: 2px">
+            <span style="font-weight: 600">Alubond fasada</span>
+            <span style="font-size: 13px; color: #5B5A56">[Mesto, godina]</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center; gap: 8px; height: 8px">
+        <button class="dot active" aria-label="Slajd 1"></button>
+        <button class="dot" aria-label="Slajd 2"></button>
+        <button class="dot" aria-label="Slajd 3"></button>
+      </div>
+      </div>
+      <a href="projekti.html" class="rev-link" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 52px; border: 1px solid rgba(246,245,242,0.5); border-radius: 6px; color: #F6F5F2; text-decoration: none; font-weight: 600; font-size: 15px; box-sizing: border-box">Vidi sve projekte <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></a>
+    </div>
+  </section>
+
+  <!-- O NAMA -->
+  
+
+  <!-- RECENZIJE -->
+  <section id="recenzije" style="border-bottom: 1px solid #E2E0DB; background-color: #F6F5F2">
+    <div style="padding: 64px 16px; display: flex; flex-direction: column; gap: 28px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Recenzije</div>
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 30px; line-height: 1.1; color: #1B1B1A">Šta kažu naši klijenti</h2>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0">
+            <div style="display: flex; align-items: center; gap: 8px">
+              <span style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 30px; line-height: 1; color: #1B1B1A">4,3</span>
+              <div style="display: flex; gap: 2px">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#5B5A56"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg>
+              </div>
+            </div>
+            <span style="font-size: 13px; color: #5B5A56">6 recenzija na Google mapama</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="rev-mobile">
       <div class="rev-marquee">
         <div class="rev-track">
           <figure class="rev-card rev-m">
-            <div class="stars"><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg></div>
+            <div class="rev-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg></div>
             <div class="rev-q">„Vrhunski kvalitet, usluga besprekorna, sve preporuke!”</div>
-            <figcaption><span class="rev-name">Vladan Prokopović</span><span class="rev-src">Recenzija na Google mapama</span></figcaption>
+            <figcaption><span class="rev-n">Vladan Prokopović</span><span class="rev-s">Recenzija na Google mapama</span></figcaption>
           </figure>
           <figure class="rev-card rev-m">
-            <div class="stars"><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg></div>
+            <div class="rev-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg></div>
             <div class="rev-q">Ocena 5/5</div>
-            <figcaption><span class="rev-name">Vanja Vujić</span><span class="rev-src">Google mape</span></figcaption>
+            <figcaption><span class="rev-n">Vanja Vujić</span><span class="rev-s">Google mape</span></figcaption>
           </figure>
           <figure class="rev-card rev-m">
-            <div class="stars"><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg></div>
+            <div class="rev-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg></div>
             <div class="rev-q">Ocena 5/5</div>
-            <figcaption><span class="rev-name">Ognjen Vukašinović</span><span class="rev-src">Google mape</span></figcaption>
+            <figcaption><span class="rev-n">Ognjen Vukašinović</span><span class="rev-s">Google mape</span></figcaption>
           </figure>
           <figure class="rev-card rev-m" aria-hidden="true">
-            <div class="stars"><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg></div>
+            <div class="rev-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg></div>
             <div class="rev-q">„Vrhunski kvalitet, usluga besprekorna, sve preporuke!”</div>
-            <figcaption><span class="rev-name">Vladan Prokopović</span><span class="rev-src">Recenzija na Google mapama</span></figcaption>
+            <figcaption><span class="rev-n">Vladan Prokopović</span><span class="rev-s">Recenzija na Google mapama</span></figcaption>
           </figure>
           <figure class="rev-card rev-m" aria-hidden="true">
-            <div class="stars"><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg></div>
+            <div class="rev-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg></div>
             <div class="rev-q">Ocena 5/5</div>
-            <figcaption><span class="rev-name">Vanja Vujić</span><span class="rev-src">Google mape</span></figcaption>
+            <figcaption><span class="rev-n">Vanja Vujić</span><span class="rev-s">Google mape</span></figcaption>
           </figure>
           <figure class="rev-card rev-m" aria-hidden="true">
-            <div class="stars"><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg><svg width="14" height="14" fill="#C2570B"><use href="#star"/></svg></div>
+            <div class="rev-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C2570B"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21.2l1.6-7L2 9.5l7.1-.6z"></path></svg></div>
             <div class="rev-q">Ocena 5/5</div>
-            <figcaption><span class="rev-name">Ognjen Vukašinović</span><span class="rev-src">Google mape</span></figcaption>
+            <figcaption><span class="rev-n">Ognjen Vukašinović</span><span class="rev-s">Google mape</span></figcaption>
           </figure>
         </div>
       </div>
-    </div>
-    <a href="https://maps.app.goo.gl/JHqBcYafDoTjPVsn6" target="_blank" rel="noopener" class="rev-link rev-link-m">Sve recenzije na Google mapama
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><polyline points="8,7 17,7 17,16"/></svg>
-    </a>
-  </div>
-</section>
-
-<!-- CESTA PITANJA -->
-<section id="pitanja" class="pitanja">
-  <div class="wrap">
-    <div class="pitanja-head">
-      <div class="section-label">Pitanja</div>
-      <h2 class="section-title">Česta pitanja</h2>
-    </div>
-    <div class="faq-list">
-      <details class="acc"><summary><span class="acc-title">Šta ulazi u cenu?</span><span class="acc-plus">+</span></summary><p>Izrada, demontaža starih prozora, odvoz šuta, ugradnja i klupice. Obradu špaletni ne radimo, nju treba dogovoriti sa molerom.</p></details>
-      <details class="acc"><summary><span class="acc-title">Koliko se čeka?</span><span class="acc-plus">+</span></summary><p>Za standardne boje i oblike obično 10 do 15 dana. Za posebne boje i oblike rok dobijate u ponudi.</p></details>
-      <details class="acc"><summary><span class="acc-title">Da li se obavezujem ako tražim ponudu?</span><span class="acc-plus">+</span></summary><p>Ne. Prvo dobijate okvirnu ponudu, a na besplatno merenje dolazimo tek ako vam cena odgovara.</p></details>
-      <details class="acc"><summary><span class="acc-title">Gde radite?</span><span class="acc-plus">+</span></summary><p>U Novom Sadu i celoj Vojvodini. Za veće projekte van Vojvodine pozovite, pa ćemo se dogovoriti.</p></details>
-      <details class="acc"><summary><span class="acc-title">Šta ako se posle par godina nešto pokvari?</span><span class="acc-plus">+</span></summary><p>Na stolariju i ugradnju dajemo 5 godina garancije. I posle toga izlazimo na teren, a manje intervencije uglavnom rešavamo bez naplate.</p></details>
-      <details class="acc"><summary><span class="acc-title">Koji profil i staklo da izaberem?</span><span class="acc-plus">+</span></summary><p>Za najbolju izolaciju preporučujemo Rehau Synego sa troslojnim staklom. Euro-Design 70 je povoljnija opcija. Pošaljite nam mere i recite za šta vam treba, pa ćemo vam predložiti.</p></details>
-      <details class="acc"><summary><span class="acc-title">Kako se plaća?</span><span class="acc-plus">+</span></summary><p>Avans od 50 do 60% pri potvrdi porudžbine, a ostatak po ugradnji. Plaćanje na rate ne nudimo.</p></details>
-    </div>
-  </div>
-</section>
-
-<!-- KONTAKT -->
-<section id="kontakt" class="kontakt">
-  <div class="wrap">
-    <div>
-      <div class="section-label">Kontakt</div>
-      <h2 class="section-title" style="margin-top:16px">Kontaktirajte nas</h2>
-    </div>
-    <div class="k-cards">
-      <a href="tel:+381638664220" class="k-card">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
-        <div class="k-card-label">Telefon</div>
-        <div class="k-card-value">063 866 4220</div>
+      <a href="https://maps.app.goo.gl/JHqBcYafDoTjPVsn6" target="_blank" rel="noopener" class="btn-line" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 52px; border: 1px solid #1B1B1A; border-radius: 6px; color: #1B1B1A; text-decoration: none; font-weight: 600; font-size: 16px; box-sizing: border-box">Sve recenzije na Google mapama
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><polyline points="8,7 17,7 17,16"></polyline></svg>
       </a>
-      <div class="k-card">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <div class="k-card-label">Adresa</div>
-        <div class="k-card-value">Kosovska 35, Bački Petrovac</div>
+    </div>
+  </section>
+
+  <!-- CESTA PITANJA -->
+  <section id="pitanja" style="border-bottom: 1px solid #E2E0DB; background: #1b1b1a">
+    <div style="padding: 64px 16px; display: flex; flex-direction: column; gap: 24px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Pitanja</div>
+        <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 30px; line-height: 1.1; color: #F6F5F2">Česta pitanja</h2>
       </div>
-      <a href="mailto:info@zprofil.co.rs" class="k-card">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
-        <div class="k-card-label">Email</div>
-        <div class="k-card-value">info@zprofil.co.rs</div>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid rgba(246,245,242,0.18)">
+        <details class="acc faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 14px; padding: 18px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px; line-height: 1.3">Šta ulazi u cenu?</span>
+            <span class="acc-plus" style="font-size: 18px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B8B5AE">Izrada, demontaža starih prozora, odvoz šuta, ugradnja i klupice. Obradu špaletni ne radimo, nju treba dogovoriti sa molerom.</p>
+        </details>
+        <details class="acc faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 14px; padding: 18px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px; line-height: 1.3">Koliko se čeka?</span>
+            <span class="acc-plus" style="font-size: 18px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B8B5AE">Za standardne boje i oblike obično 10 do 15 dana. Za posebne boje i oblike rok dobijate u ponudi.</p>
+        </details>
+        <details class="acc faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 14px; padding: 18px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px; line-height: 1.3">Da li se obavezujem ako tražim ponudu?</span>
+            <span class="acc-plus" style="font-size: 18px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B8B5AE">Ne. Prvo dobijate okvirnu ponudu, a na besplatno merenje dolazimo tek ako vam cena odgovara.</p>
+        </details>
+        <details class="acc faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 14px; padding: 18px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px; line-height: 1.3">Gde radite?</span>
+            <span class="acc-plus" style="font-size: 18px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B8B5AE">U Novom Sadu i celoj Vojvodini. Za veće projekte van Vojvodine pozovite, pa ćemo se dogovoriti.</p>
+        </details>
+        <details class="acc faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 14px; padding: 18px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px; line-height: 1.3">Šta ako se posle par godina nešto pokvari?</span>
+            <span class="acc-plus" style="font-size: 18px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B8B5AE">Na stolariju i ugradnju dajemo 5 godina garancije. I posle toga izlazimo na teren, a manje intervencije uglavnom rešavamo bez naplate.</p>
+        </details>
+        <details class="acc faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 14px; padding: 18px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px; line-height: 1.3">Koji profil i staklo da izaberem?</span>
+            <span class="acc-plus" style="font-size: 18px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B8B5AE">Za najbolju izolaciju preporučujemo Rehau Synego sa troslojnim staklom. Euro-Design 70 je povoljnija opcija. Pošaljite nam mere, pa ćemo vam predložiti.</p>
+        </details>
+        <details class="acc faq" name="faq" style="border-bottom: 1px solid rgba(246,245,242,0.18)">
+          <summary style="display: flex; align-items: center; gap: 14px; padding: 18px 2px; cursor: pointer">
+            <span style="flex: 1; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px; line-height: 1.3">Kako se plaća?</span>
+            <span class="acc-plus" style="font-size: 18px; font-weight: 700; line-height: 1; flex-shrink: 0">+</span>
+          </summary>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #B8B5AE">Avans od 50 do 60% pri potvrdi porudžbine, a ostatak po ugradnji. Plaćanje na rate ne nudimo.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" style="border-bottom: 1px solid #E2E0DB; background-color: transparent">
+    <div style="padding: 64px 16px; display: flex; flex-direction: column; gap: 32px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Kontakt</div>
+        <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 30px; line-height: 1.1">Kontaktirajte nas</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 10px">
+        <a href="tel:+381638664220" class="k-card" style="padding: 14px 12px; border: 1px solid #E2E0DB; border-radius: 6px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: inherit">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg>
+          <div style="font-size: 13px; color: #5B5A56; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600">Telefon</div>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; color: #1B1B1A">063 866 4220</div>
+        </a>
+        <div class="k-card" style="padding: 14px 12px; border: 1px solid #E2E0DB; border-radius: 6px; display: flex; flex-direction: column; gap: 8px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <div style="font-size: 13px; color: #5B5A56; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600">Adresa</div>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; color: #1B1B1A">Kosovska 35, Bački Petrovac</div>
+        </div>
+        <a href="mailto:info@zprofil.co.rs" class="k-card" style="padding: 14px 12px; border: 1px solid #E2E0DB; border-radius: 6px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: inherit">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <div style="font-size: 13px; color: #5B5A56; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600">Email</div>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; color: #1B1B1A">info@zprofil.co.rs</div>
+        </a>
+        <div class="k-card" style="padding: 14px 12px; border: 1px solid #E2E0DB; border-radius: 6px; display: flex; flex-direction: column; gap: 8px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline></svg>
+          <div style="font-size: 13px; color: #5B5A56; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600">Radno vreme</div>
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; color: #1B1B1A">Pon - sub, 08-15h</div>
+        </div>
+      </div>
+      <div style="border: 1px solid #E2E0DB; border-radius: 6px; overflow: hidden">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.5!2d19.5872!3d45.3567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDIxJzI0LjEiTiAxOcKwMzUnMTMuOSJF!5e0!3m2!1ssr!2srs!4v1" width="358" height="240" style="border: 0; display: block; width: 100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #161615; color: #D6D4CE">
+    <div style="padding: 28px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; background-color: #1b1b1a">
+      <a href="#top" style="display: flex; align-items: center; background: #FFFFFF; padding: 6px 10px; border-radius: 6px">
+        <img src="img/logo.png" alt="Zprofil - ALU i PVC stolarija" style="height: 28px; width: auto; display: block">
       </a>
-      <div class="k-card">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-        <div class="k-card-label">Radno vreme</div>
-        <div class="k-card-value">Pon — sub, 08–15h</div>
-      </div>
+      <div style="font-size: 13px; color: #9A978F; text-align: right">© 2026 Zotović profil d.o.o.</div>
     </div>
-    <div class="k-map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1393!2d19.6032091!3d45.36448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b68ccbbdfd4cf%3A0xd0da0ec48d99da21!2sZotovi%C4%87%20profil%20d.o.o.!5e0!3m2!1ssr!2srs!4v1" width="1100" height="340" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="wrap">
-    <a href="#top" class="footer-logo"><img src="images/logo.webp" alt="Zprofil" width="140" height="56"></a>
-    <p>&copy; 2026 Zotović profil d.o.o.</p>
-  </div>
-</footer>
-
-<a href="tel:+381638664220" class="call-fab" aria-label="Pozovite nas">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
-</a>
-
-<script>
-(function(){
-  // Hamburger menu
-  var ham = document.querySelector('.hamburger');
-  var mobNav = document.querySelector('.mob-nav');
-  var mobOverlay = document.querySelector('.mob-overlay');
-  var hamOpen = ham.querySelector('.ham-open');
-  var hamClose = ham.querySelector('.ham-close');
-
-  function toggleMenu(){
-    var isOpen = mobNav.classList.toggle('open');
-    mobOverlay.classList.toggle('open', isOpen);
-    hamOpen.style.display = isOpen ? 'none' : '';
-    hamClose.style.display = isOpen ? '' : 'none';
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  }
-  function closeMenu(){
-    mobNav.classList.remove('open');
-    mobOverlay.classList.remove('open');
-    hamOpen.style.display = '';
-    hamClose.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-
-  ham.addEventListener('click', toggleMenu);
-  mobOverlay.addEventListener('click', closeMenu);
-  mobNav.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', closeMenu);
-  });
-
-  // Call button stops above the footer on mobile
-  var fab = document.querySelector('.call-fab');
-  var footer = document.querySelector('.site-footer');
-  var mobileMq = window.matchMedia('(max-width: 768px)');
-  var fabTicking = false;
-  function placeFab(){
-    fabTicking = false;
-    var shift = mobileMq.matches ? Math.max(0, window.innerHeight - footer.getBoundingClientRect().top) : 0;
-    fab.style.transform = shift ? 'translateY(' + (-shift) + 'px)' : '';
-  }
-  function requestFab(){ if (!fabTicking) { fabTicking = true; requestAnimationFrame(placeFab); } }
-  window.addEventListener('scroll', requestFab, {passive: true});
-  window.addEventListener('resize', requestFab);
-  placeFab();
-
-  // Only one open item per accordion list
-  document.querySelectorAll('.acc').forEach(function(item){
-    item.addEventListener('toggle', function(){
-      if (!item.open) return;
-      item.parentElement.querySelectorAll('.acc[open]').forEach(function(other){
-        if (other !== item) other.removeAttribute('open');
-      });
-    });
-  });
-
-  // Slider dots
-  var track = document.querySelector('.slider-track');
-  if (!track) return;
-  var dots = document.querySelectorAll('.proj-dots .dot');
-  var slides = track.querySelectorAll('.proj-fig');
-
-  dots.forEach(function(dot, i){
-    dot.addEventListener('click', function(){
-      slides[i].scrollIntoView({behavior:'smooth', inline:'start', block:'nearest'});
-    });
-  });
-
-  var observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if (entry.isIntersecting) {
-        var idx = Array.prototype.indexOf.call(slides, entry.target);
-        dots.forEach(function(d, j){ d.classList.toggle('active', j === idx); });
-      }
-    });
-  }, {root: track, threshold: 0.6});
-
-  slides.forEach(function(s){ observer.observe(s); });
-})();
-</script>
-
+  </footer>
+  <a href="tel:+381638664220" class="call-fab" aria-label="Pozovite nas">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg>
+  </a>
+</div>
+</div>
+<script src="js/site.js"></script>
 </body>
 </html>

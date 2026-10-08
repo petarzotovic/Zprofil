@@ -1,0 +1,9 @@
+/* Zprofil - zajednicki stilovi */
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:#1B1B1A;background:#FFFFFF;overflow-x:hidden}
+img{max-width:100%}
+.v-m{display:none}
+@media (max-width: 1199.98px){.v-d{display:none}.v-m{display:block}}
+.call-fab{position:fixed !important}
+.call-fab{bottom:24px !important}
+@media (max-width: 1199.98px){.call-fab{bottom:20px !important;right:16px !important}}

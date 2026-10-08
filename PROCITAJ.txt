@@ -1,0 +1,27 @@
+Zprofil - sajt
+
+Kako postaviti:
+1. Raspakujte ZIP.
+2. Ceo sadrzaj foldera (sve .html fajlove i foldere css, js, img) prebacite u glavni folder
+   sajta na hostingu (najcesce public_html).
+3. Pocetna stranica je index.html.
+
+Stranice:
+  index.html            Pocetna
+  proizvodi.html        Proizvodi
+  prozori.html          PVC i ALU prozori
+  vrata.html            PVC i ALU vrata
+  klizni-sistemi.html   Klizni sistemi
+  portali.html          Portali
+  dodatna-oprema.html   Dodatna oprema
+  fasade.html           Ventilisane fasade
+  projekti.html         Projekti
+  o-nama.html           O nama
+  kontakt.html          Kontakt
+
+Svaka stranica ima desktop i mobilnu verziju; ispod 1200px sirine ekrana
+prikazuje se mobilna verzija.
+
+Pre objavljivanja zamenite:
+  - sive okvire "FOTOGRAFIJA: ..." pravim fotografijama
+  - oznake [DOPUNITE: ...] i [Mesto, godina] pravim podacima
