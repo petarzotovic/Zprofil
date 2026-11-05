@@ -9,11 +9,9 @@ Kako postaviti:
 Stranice:
   index.html            Pocetna
   proizvodi.html        Proizvodi
-  prozori.html          PVC i ALU prozori
-  vrata.html            PVC i ALU vrata
-  klizni-sistemi.html   Klizni sistemi
-  portali.html          Portali
-  dodatna-oprema.html   Dodatna oprema
+  pvc-stolarija.html    PVC stolarija (prozori, vrata, klizni sistemi, portali, oprema)
+  alu-stolarija.html    ALU stolarija (prozori, vrata, klizni sistemi, portali, oprema)
+  pvc-*.html, alu-*.html  stranice pojedinacnih proizvoda (npr. pvc-vrata.html sa konfiguratorom panela)
   fasade.html           Ventilisane fasade
   projekti.html         Projekti
   o-nama.html           O nama

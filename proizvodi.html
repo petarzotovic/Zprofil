@@ -39,6 +39,11 @@ a{color:#A84A08}a:hover{color:#7E3706}
 .hdr.top .dd-btn{color:#FFFFFF !important}
 .hdr.top .dd-btn[aria-current]{color:#F2B183 !important}
 .hdr.top .dd-btn:hover,.hdr.top .dd:focus-within .dd-btn{color:#F2B183 !important}
+.sc{background:#FFFFFF;border:1px solid #E2E0DB;transition:border-color 0.25s ease, transform 0.3s ease, box-shadow 0.3s ease}.sc:hover{border-color:#C2570B;transform:translateY(-6px);box-shadow:0 14px 30px rgba(22,22,21,0.08)}
+.sc-btn{transition:background 0.25s ease}.sc:hover .sc-btn{background:#A84A08 !important}
+.sc-btn svg{transition:transform 0.25s ease}.sc:hover .sc-btn svg{transform:translateX(5px)}
+.ft-a{transition:color 0.2s ease}.ft-a:hover{color:#FFFFFF !important}
+.dd-item{position:relative}.dd-box a.dd-par{display:flex;align-items:center;justify-content:space-between;gap:16px}.dd-fly{position:absolute;left:100%;top:-9px;padding-left:6px;opacity:0;visibility:hidden;transform:translateX(-6px);transition:opacity 0.2s ease, transform 0.2s ease, visibility 0.2s}.dd-item:hover .dd-fly,.dd-item:focus-within .dd-fly{opacity:1;visibility:visible;transform:none}.dd-fly .dd-box{min-width:200px}.dd-item:hover > a.dd-par{background:#F6F5F2;color:#C2570B}
 }
 @media (max-width: 1199.98px){
 body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:#1B1B1A;background:#FFFFFF}
@@ -52,7 +57,10 @@ a{color:#A84A08}a:hover{color:#7E3706}
 .hdr.solid{background:#FFFFFF;border-bottom-color:#E2E0DB;box-shadow:0 6px 20px rgba(22,22,21,0.08)}
 .burger{transition:background-color 0.3s ease}.burger svg{transition:stroke 0.3s ease}
 .hdr.top .burger{background:transparent !important}.hdr.top .burger svg{stroke:#FFFFFF}
-
+.sc{background:#FFFFFF;border:1px solid #E2E0DB;transition:border-color 0.25s ease, transform 0.3s ease, box-shadow 0.3s ease}.sc:hover{border-color:#C2570B;transform:translateY(-6px);box-shadow:0 14px 30px rgba(22,22,21,0.08)}
+.sc-btn{transition:background 0.25s ease}.sc:hover .sc-btn{background:#A84A08 !important}
+.sc-btn svg{transition:transform 0.25s ease}.sc:hover .sc-btn svg{transform:translateX(5px)}
+.ft-a{transition:color 0.2s ease}.ft-a:hover{color:#FFFFFF !important}
 .burger{transition:background-color 0.3s ease}.burger svg{transition:stroke 0.3s ease}
 .burger{cursor:pointer}.burger .ic-x{display:none}.burger.open .ic-x{display:block}.burger.open .ic-menu{display:none}
 .mnav{position:absolute;top:100%;left:0;right:0;z-index:2;background:#FFFFFF;border-top:1px solid #E2E0DB;box-shadow:0 16px 32px rgba(22,22,21,0.14);padding:8px 16px 24px;max-height:calc(100vh - 73px);overflow-y:auto;box-sizing:border-box;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity 0.25s ease, transform 0.25s ease, visibility 0.25s}
@@ -63,9 +71,13 @@ a{color:#A84A08}a:hover{color:#7E3706}
 .mnav-l:hover{color:#C2570B}
 .mnav-chev{transition:transform 0.2s ease}.mnav-p.open{color:#C2570B}.mnav-p.open .mnav-chev{transform:rotate(180deg)}
 .msub{display:flex;flex-direction:column;overflow:hidden;max-height:0;background:#F6F5F2;border-radius:6px;transition:max-height 0.3s ease, margin 0.3s ease}
-.msub.open{max-height:320px;margin:8px 0}
+.msub.open{max-height:760px;margin:8px 0}
 .msub a{display:flex;align-items:center;min-height:46px;padding:0 16px;color:#1B1B1A;text-decoration:none;font-size:16px;font-weight:500}
 .msub a:hover{color:#C2570B}
+.msub details.mg{border-bottom:1px solid #E2E0DB}.msub details.mg:last-child{border-bottom:none}
+.msub summary{list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:48px;padding:0 16px;cursor:pointer;font-weight:600;font-size:16px;color:#1B1B1A}.msub summary::-webkit-details-marker{display:none}
+.msub details[open] summary{color:#C2570B}.msub .mg-chev{transition:transform 0.2s ease}.msub details[open] .mg-chev{transform:rotate(180deg)}
+.msub .mg-l{display:flex;flex-direction:column;padding-bottom:8px}.msub .mg-l a{min-height:40px;padding-left:28px;font-size:15px}
 }
 </style>
 </head>
@@ -87,11 +99,30 @@ a{color:#A84A08}a:hover{color:#7E3706}
           </a>
           <div class="dd-menu">
             <div class="dd-box">
-              <a href="prozori.html">Prozori</a>
-              <a href="vrata.html">Vrata</a>
-              <a href="klizni-sistemi.html">Klizni sistemi</a>
-              <a href="portali.html">Portali</a>
-              <a href="dodatna-oprema.html">Dodatna oprema</a>
+              <div class="dd-item">
+                <a href="pvc-stolarija.html" class="dd-par">PVC stolarija<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9,6 15,12 9,18"></polyline></svg></a>
+                <div class="dd-fly">
+                  <div class="dd-box">
+                    <a href="pvc-prozori.html">Prozori</a>
+                    <a href="pvc-vrata.html">Vrata</a>
+                    <a href="pvc-klizni-sistemi.html">Klizni sistemi</a>
+                    <a href="pvc-portali.html">Portali</a>
+                    <a href="pvc-dodatna-oprema.html">Dodatna oprema</a>
+                  </div>
+                </div>
+              </div>
+              <div class="dd-item">
+                <a href="alu-stolarija.html" class="dd-par">ALU stolarija<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9,6 15,12 9,18"></polyline></svg></a>
+                <div class="dd-fly">
+                  <div class="dd-box">
+                    <a href="alu-prozori.html">Prozori</a>
+                    <a href="alu-vrata.html">Vrata</a>
+                    <a href="alu-klizni-sistemi.html">Klizni sistemi</a>
+                    <a href="alu-portali.html">Portali</a>
+                    <a href="alu-dodatna-oprema.html">Dodatna oprema</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -114,121 +145,33 @@ a{color:#A84A08}a:hover{color:#7E3706}
         <span style="color: #FFFFFF; font-weight: 600">Proizvodi</span>
       </nav>
       <h1 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 100px; line-height: 1.02; letter-spacing: -0.02em; color: #FFFFFF">Naši proizvodi</h1>
-      <p style="margin: 0; max-width: 620px; color: #D6D4CE; font-size: 24px; line-height: 1.55">PVC i ALU stolarija po meri, sa ugradnjom. Izaberite proizvod i pogledajte detalje, profile i opcije.</p>
+      <p style="margin: 0; max-width: 660px; color: #D6D4CE; font-size: 22px; line-height: 1.55">PVC i ALU stolarija po meri, sa ugradnjom. Izaberite vrstu stolarije, pa prozore, vrata, klizne sisteme, portale ili dodatnu opremu.</p>
     </div>
   </section>
 
   <!-- PROIZVODI -->
   <section id="proizvodi" style="border-bottom: 1px solid #E2E0DB">
-    <div style="width: 1100px; margin: 0 auto; padding: 96px 0; display: flex; flex-direction: column; gap: 24px">
-
-      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
-
-        <!-- Prozori -->
-        <article class="pc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-          <div style="height: 300px; overflow: hidden; background: #D9D7D2">
-            <div class="pc-img" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
-              <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: PVC I ALU PROZORI</span>
-            </div>
+    <div style="width: 1100px; margin: 0 auto; padding: 96px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+        <a href="pvc-stolarija.html" class="sc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: #1B1B1A">
+          <div style="height: 340px; background: #F6F5F2; display: flex; align-items: center; justify-content: center"><img src="img/pvc-profil.jpg" alt="PVC profil u preseku" style="height: 280px; width: auto; object-fit: contain; mix-blend-mode: multiply"></div>
+          <div style="padding: 36px 40px 40px; display: flex; flex-direction: column; gap: 16px; flex-grow: 1">
+            <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">REHAU profili</div>
+            <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 44px; line-height: 1.08; letter-spacing: -0.01em">PVC stolarija</h2>
+            <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4946">PVC prozori i vrata od REHAU profila za kuće, stanove i zgrade. Dobro čuvaju toplotu, smanjuju buku i lako se održavaju.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border-radius: 999px; background: #F6F5F2; font-size: 14px; font-weight: 500; color: #3D3C39">Prozori</span><span style="display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border-radius: 999px; background: #F6F5F2; font-size: 14px; font-weight: 500; color: #3D3C39">Vrata</span><span style="display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border-radius: 999px; background: #F6F5F2; font-size: 14px; font-weight: 500; color: #3D3C39">Klizni sistemi</span><span style="display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border-radius: 999px; background: #F6F5F2; font-size: 14px; font-weight: 500; color: #3D3C39">Portali</span><span style="display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border-radius: 999px; background: #F6F5F2; font-size: 14px; font-weight: 500; color: #3D3C39">Dodatna oprema</span></div>
+            <span class="sc-btn" style="margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 28px; background: #C2570B; color: #FFFFFF; border-radius: 6px; font-weight: 600; font-size: 17px">Pogledajte PVC stolariju <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></span>
           </div>
-          <div style="padding: 36px 36px 40px; display: flex; flex-direction: column; gap: 16px; flex-grow: 1">
-            <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Stolarija</div>
-            <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.25; letter-spacing: -0.01em">PVC i ALU prozori</h2>
-            <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4946">PVC za kuće i stanove, ALU za velika staklena polja i poslovne objekte. Zadržavaju toplotu i buku napolju.</p>
-            <ul style="margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
-              <li style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Rehau Synego i Euro-Design 70 profili</li>
-              <li style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Troslojno staklo za najbolju izolaciju</li>
-              <li style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>5 godina garancije na stolariju i ugradnju</li>
-            </ul>
-            <a href="prozori.html" class="btn-cta" style="margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 26px; background: #C2570B; color: #FFFFFF; border: 2px solid transparent; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 17px; box-sizing: border-box">Pogledaj prozore
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
-            </a>
+        </a>
+        <a href="alu-stolarija.html" class="sc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: #1B1B1A">
+          <div style="height: 340px; background: #F6F5F2; display: flex; align-items: center; justify-content: center"><img src="img/alu-profil.jpg" alt="ALU profil u preseku" style="height: 280px; width: auto; object-fit: contain; mix-blend-mode: multiply"></div>
+          <div style="padding: 36px 40px 40px; display: flex; flex-direction: column; gap: 16px; flex-grow: 1">
+            <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Aluminijum</div>
+            <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 44px; line-height: 1.08; letter-spacing: -0.01em">ALU stolarija</h2>
+            <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4946">Aluminijumski prozori, vrata i portali za velika staklena polja, poslovne objekte i moderne kuće. Čvrsti su i dugo traju.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border-radius: 999px; background: #F6F5F2; font-size: 14px; font-weight: 500; color: #3D3C39">Prozori</span><span style="display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border-radius: 999px; background: #F6F5F2; font-size: 14px; font-weight: 500; color: #3D3C39">Vrata</span><span style="display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border-radius: 999px; background: #F6F5F2; font-size: 14px; font-weight: 500; color: #3D3C39">Klizni sistemi</span><span style="display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border-radius: 999px; background: #F6F5F2; font-size: 14px; font-weight: 500; color: #3D3C39">Portali</span><span style="display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border-radius: 999px; background: #F6F5F2; font-size: 14px; font-weight: 500; color: #3D3C39">Dodatna oprema</span></div>
+            <span class="sc-btn" style="margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 28px; background: #C2570B; color: #FFFFFF; border-radius: 6px; font-weight: 600; font-size: 17px">Pogledajte ALU stolariju <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></span>
           </div>
-        </article>
-
-        <!-- Vrata -->
-        <article class="pc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-          <div style="height: 300px; overflow: hidden; background: #D9D7D2">
-            <div class="pc-img" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
-              <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: ULAZNA VRATA</span>
-            </div>
-          </div>
-          <div style="padding: 36px 36px 40px; display: flex; flex-direction: column; gap: 16px; flex-grow: 1">
-            <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Stolarija</div>
-            <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.25; letter-spacing: -0.01em">PVC i ALU vrata</h2>
-            <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4946">Ulazna i balkonska vrata po meri, od PVC ili ALU profila. Dobro zaptivaju i ne propuštaju hladnoću.</p>
-            <ul style="margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
-              <li style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Ulazna i balkonska vrata</li>
-              <li style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>PVC ili ALU profil, po vašim merama</li>
-              <li style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>5 godina garancije na stolariju i ugradnju</li>
-            </ul>
-            <a href="vrata.html" class="btn-cta" style="margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 26px; background: #C2570B; color: #FFFFFF; border: 2px solid transparent; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 17px; box-sizing: border-box">Pogledaj vrata
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Klizni sistemi -->
-        <article class="pc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-          <div style="height: 300px; overflow: hidden; background: #D9D7D2">
-            <div class="pc-img" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
-              <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: KLIZNI SISTEM NA TERASI</span>
-            </div>
-          </div>
-          <div style="padding: 36px 36px 40px; display: flex; flex-direction: column; gap: 16px; flex-grow: 1">
-            <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Stolarija</div>
-            <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.25; letter-spacing: -0.01em">Klizni sistemi</h2>
-            <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4946">Za izlaz na terasu ili u dvorište. Krilo klizi uz zid i ne zauzima mesto u sobi.</p>
-            <ul style="margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
-              <li style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Izlaz na terasu ili u dvorište</li>
-              <li style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Krilo ne zauzima prostor u sobi</li>
-              <li style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Izrada po meri, sa ugradnjom</li>
-            </ul>
-            <a href="klizni-sistemi.html" class="btn-cta" style="margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 26px; background: #C2570B; color: #FFFFFF; border: 2px solid transparent; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 17px; box-sizing: border-box">Pogledaj klizne sisteme
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Portali -->
-        <article class="pc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-          <div style="height: 300px; overflow: hidden; background: #D9D7D2">
-            <div class="pc-img" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
-              <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: ALU PORTAL LOKALA</span>
-            </div>
-          </div>
-          <div style="padding: 36px 36px 40px; display: flex; flex-direction: column; gap: 16px; flex-grow: 1">
-            <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Poslovni prostor</div>
-            <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.25; letter-spacing: -0.01em">Portali</h2>
-            <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4946">Ulazi za lokale, radnje i poslovne prostore. Vrata, staklo i ram pravimo kao jednu celinu.</p>
-            <ul style="margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
-              <li style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Lokali, radnje i poslovni prostori</li>
-              <li style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Vrata, staklo i ram kao jedna celina</li>
-              <li style="display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Izrada po meri, sa ugradnjom</li>
-            </ul>
-            <a href="portali.html" class="btn-cta" style="margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 26px; background: #C2570B; color: #FFFFFF; border: 2px solid transparent; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 17px; box-sizing: border-box">Pogledaj portale
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
-            </a>
-          </div>
-        </article>
-      </div>
-
-      <!-- Dodatna oprema (široka kartica) -->
-      <article class="pc" style="border-radius: 6px; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr)">
-        <div style="min-height: 340px; overflow: hidden; background: #D9D7D2">
-          <div class="pc-img" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
-            <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: ROLETNE I DODATNA OPREMA</span>
-          </div>
-        </div>
-        <div style="padding: 44px 44px 44px; display: flex; flex-direction: column; justify-content: center; gap: 16px">
-          <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Uz stolariju</div>
-          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.25; letter-spacing: -0.01em">Dodatna oprema</h2>
-          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A4946">Roletne i ostala oprema koja ide uz vašu stolariju. [DOPUNITE: šta sve nudite, npr. vrste roletni i ostale opreme]</p>
-          <a href="dodatna-oprema.html" class="btn-cta" style="margin-top: 8px; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 26px; background: #C2570B; color: #FFFFFF; border: 2px solid transparent; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 17px; box-sizing: border-box">Pogledaj dodatnu opremu
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
-          </a>
-        </div>
-      </article>
+        </a>
     </div>
   </section>
 
@@ -246,11 +189,20 @@ a{color:#A84A08}a:hover{color:#7E3706}
   </section>
 
   <footer style="color: #D6D4CE; background-color: #1B1B1A; border-top: 1px solid rgba(246,245,242,0.12)">
-    <div style="width: 1100px; margin: 0 auto; padding: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px">
-      <a href="index.html" style="display: flex; align-items: center; background: #FFFFFF; padding: 8px 12px; border-radius: 6px">
-        <img src="img/logo.png" alt="Zprofil - ALU i PVC stolarija" style="height: 36px; width: auto; display: block">
-      </a>
-      <div style="font-size: 16px; color: #9A978F">© 2026 Zotović profil d.o.o.</div>
+    <div style="width: 1100px; margin: 0 auto; padding: 72px 0 56px; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.3fr; gap: 48px">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px">
+        <a href="index.html" style="display: flex; align-items: center; background: #FFFFFF; padding: 10px 14px; border-radius: 6px"><img src="img/logo.png" alt="Zprofil - ALU i PVC stolarija" style="height: 44px; width: auto; display: block"></a>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B8B5AE; max-width: 300px">PVC i ALU stolarija po meri i ventilisane fasade, sa ugradnjom. Iz Bačkog Petrovca, od 2007. godine.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F2B183">Meni</div><a href="index.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 16px">Početna</a><a href="proizvodi.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 16px">Proizvodi</a><a href="fasade.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 16px">Fasade</a><a href="projekti.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 16px">Projekti</a><a href="o-nama.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 16px">O nama</a><a href="kontakt.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 16px">Kontakt</a></div>
+      <div style="display: flex; flex-direction: column; gap: 12px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F2B183">Proizvodi</div><a href="pvc-stolarija.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 16px">PVC stolarija</a><a href="alu-stolarija.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 16px">ALU stolarija</a><a href="pvc-prozori.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 16px">PVC prozori</a><a href="pvc-vrata.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 16px">PVC vrata</a><a href="alu-portali.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 16px">ALU portali</a><a href="fasade.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 16px">Ventilisane fasade</a></div>
+      <div style="display: flex; flex-direction: column; gap: 12px"><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F2B183">Kontakt</div><div style="display: flex; align-items: flex-start; gap: 10px; font-size: 16px; color: #B8B5AE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg><a href="tel:+381638664220" class="ft-a" style="color: #B8B5AE; text-decoration: none">063 866 4220</a></div><div style="display: flex; align-items: flex-start; gap: 10px; font-size: 16px; color: #B8B5AE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><polyline points="3,7 12,13 21,7"></polyline></svg><a href="mailto:info@zprofil.co.rs" class="ft-a" style="color: #B8B5AE; text-decoration: none">info@zprofil.co.rs</a></div><div style="display: flex; align-items: flex-start; gap: 10px; font-size: 16px; color: #B8B5AE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg><a href="https://maps.app.goo.gl/JHqBcYafDoTjPVsn6" target="_blank" rel="noopener" class="ft-a" style="color: #B8B5AE; text-decoration: none">Kosovska 35, Bački Petrovac</a></div><div style="display: flex; align-items: flex-start; gap: 10px; font-size: 16px; color: #B8B5AE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12,7 12,12 15.5,14"></polyline></svg><span>Pon - sub, 08 - 15h</span></div></div>
+    </div>
+    <div style="border-top: 1px solid rgba(246,245,242,0.12)">
+      <div style="width: 1100px; margin: 0 auto; padding: 22px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: 14px; color: #9A978F">
+        <span>© 2026 Zotović profil d.o.o. Sva prava zadržana.</span>
+        <span style="display: flex; gap: 24px"><a href="politika-privatnosti.html" class="ft-a" style="color: #9A978F; text-decoration: none">Politika privatnosti</a><span>Autorizovani REHAU partner</span></span>
+      </div>
     </div>
   </footer>
   <a href="tel:+381638664220" class="call-fab" aria-label="Pozovite nas">
@@ -279,11 +231,28 @@ a{color:#A84A08}a:hover{color:#7E3706}
         <svg class="mnav-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"></polyline></svg>
       </a>
       <div class="msub">
-        <a href="prozori.html" data-act="close">Prozori</a>
-        <a href="vrata.html" data-act="close">Vrata</a>
-        <a href="klizni-sistemi.html" data-act="close">Klizni sistemi</a>
-        <a href="portali.html" data-act="close">Portali</a>
-        <a href="dodatna-oprema.html" data-act="close">Dodatna oprema</a>
+        <details class="mg">
+          <summary>PVC stolarija<svg class="mg-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6,9 12,15 18,9"></polyline></svg></summary>
+          <div class="mg-l">
+          <a href="pvc-stolarija.html" data-act="close">Sva PVC stolarija</a>
+          <a href="pvc-prozori.html" data-act="close">Prozori</a>
+          <a href="pvc-vrata.html" data-act="close">Vrata</a>
+          <a href="pvc-klizni-sistemi.html" data-act="close">Klizni sistemi</a>
+          <a href="pvc-portali.html" data-act="close">Portali</a>
+          <a href="pvc-dodatna-oprema.html" data-act="close">Dodatna oprema</a>
+          </div>
+        </details>
+        <details class="mg">
+          <summary>ALU stolarija<svg class="mg-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6,9 12,15 18,9"></polyline></svg></summary>
+          <div class="mg-l">
+          <a href="alu-stolarija.html" data-act="close">Sva ALU stolarija</a>
+          <a href="alu-prozori.html" data-act="close">Prozori</a>
+          <a href="alu-vrata.html" data-act="close">Vrata</a>
+          <a href="alu-klizni-sistemi.html" data-act="close">Klizni sistemi</a>
+          <a href="alu-portali.html" data-act="close">Portali</a>
+          <a href="alu-dodatna-oprema.html" data-act="close">Dodatna oprema</a>
+          </div>
+        </details>
       </div>
       <a href="fasade.html" class="mnav-l" data-act="close">Fasade</a>
       <a href="projekti.html" class="mnav-l" data-act="close">Projekti</a>
@@ -303,108 +272,33 @@ a{color:#A84A08}a:hover{color:#7E3706}
         <span style="color: #FFFFFF; font-weight: 600">Proizvodi</span>
       </nav>
       <h1 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 44px; line-height: 1.02; letter-spacing: -0.02em; color: #FFFFFF">Naši proizvodi</h1>
-      <p style="margin: 0; color: #D6D4CE; font-size: 16px; line-height: 1.55">PVC i ALU stolarija po meri, sa ugradnjom. Izaberite proizvod i pogledajte detalje, profile i opcije.</p>
+      <p style="margin: 0; color: #D6D4CE; font-size: 16px; line-height: 1.55">PVC i ALU stolarija po meri, sa ugradnjom. Izaberite vrstu stolarije, pa prozore, vrata, klizne sisteme, portale ili dodatnu opremu.</p>
     </div>
   </section>
 
   <!-- PROIZVODI -->
   <section id="proizvodi" style="border-bottom: 1px solid #E2E0DB">
     <div style="padding: 48px 16px; display: flex; flex-direction: column; gap: 16px">
-
-      <!-- Prozori -->
-      <article class="pc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="height: 200px; background: #D9D7D2; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
-          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: PVC I ALU PROZORI</span>
+      <a href="pvc-stolarija.html" class="sc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: #1B1B1A">
+        <div style="height: 220px; background: #F6F5F2; display: flex; align-items: center; justify-content: center"><img src="img/pvc-profil.jpg" alt="PVC profil u preseku" style="height: 180px; width: auto; object-fit: contain; mix-blend-mode: multiply"></div>
+        <div style="padding: 22px 20px 24px; display: flex; flex-direction: column; gap: 12px">
+          <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">REHAU profili</div>
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.12">PVC stolarija</h2>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4946">PVC prozori i vrata od REHAU profila za kuće, stanove i zgrade. Dobro čuvaju toplotu, smanjuju buku i lako se održavaju.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: #F6F5F2; font-size: 13px; font-weight: 500; color: #3D3C39">Prozori</span><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: #F6F5F2; font-size: 13px; font-weight: 500; color: #3D3C39">Vrata</span><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: #F6F5F2; font-size: 13px; font-weight: 500; color: #3D3C39">Klizni sistemi</span><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: #F6F5F2; font-size: 13px; font-weight: 500; color: #3D3C39">Portali</span><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: #F6F5F2; font-size: 13px; font-weight: 500; color: #3D3C39">Dodatna oprema</span></div>
+          <span class="sc-btn" style="margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px; background: #C2570B; color: #FFFFFF; border-radius: 6px; font-weight: 600; font-size: 16px">Pogledajte PVC stolariju <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></span>
         </div>
-        <div style="padding: 24px 20px 24px; display: flex; flex-direction: column; gap: 12px">
-          <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Stolarija</div>
-          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.25">PVC i ALU prozori</h2>
-          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4946">PVC za kuće i stanove, ALU za velika staklena polja i poslovne objekte. Zadržavaju toplotu i buku napolju.</p>
-          <ul style="margin: 2px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px">
-            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Rehau Synego i Euro-Design 70 profili</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Troslojno staklo za najbolju izolaciju</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>5 godina garancije na stolariju i ugradnju</li>
-          </ul>
-          <a href="prozori.html" class="btn-cta" style="margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px; padding: 0 20px; background: #C2570B; color: #FFFFFF; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px; box-sizing: border-box">Pogledaj prozore
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
-          </a>
+      </a>
+      <a href="alu-stolarija.html" class="sc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: #1B1B1A">
+        <div style="height: 220px; background: #F6F5F2; display: flex; align-items: center; justify-content: center"><img src="img/alu-profil.jpg" alt="ALU profil u preseku" style="height: 180px; width: auto; object-fit: contain; mix-blend-mode: multiply"></div>
+        <div style="padding: 22px 20px 24px; display: flex; flex-direction: column; gap: 12px">
+          <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Aluminijum</div>
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.12">ALU stolarija</h2>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4946">Aluminijumski prozori, vrata i portali za velika staklena polja, poslovne objekte i moderne kuće. Čvrsti su i dugo traju.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: #F6F5F2; font-size: 13px; font-weight: 500; color: #3D3C39">Prozori</span><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: #F6F5F2; font-size: 13px; font-weight: 500; color: #3D3C39">Vrata</span><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: #F6F5F2; font-size: 13px; font-weight: 500; color: #3D3C39">Klizni sistemi</span><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: #F6F5F2; font-size: 13px; font-weight: 500; color: #3D3C39">Portali</span><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: #F6F5F2; font-size: 13px; font-weight: 500; color: #3D3C39">Dodatna oprema</span></div>
+          <span class="sc-btn" style="margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px; background: #C2570B; color: #FFFFFF; border-radius: 6px; font-weight: 600; font-size: 16px">Pogledajte ALU stolariju <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></span>
         </div>
-      </article>
-
-      <!-- Vrata -->
-      <article class="pc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="height: 200px; background: #D9D7D2; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
-          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: ULAZNA VRATA</span>
-        </div>
-        <div style="padding: 24px 20px 24px; display: flex; flex-direction: column; gap: 12px">
-          <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Stolarija</div>
-          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.25">PVC i ALU vrata</h2>
-          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4946">Ulazna i balkonska vrata po meri, od PVC ili ALU profila. Dobro zaptivaju i ne propuštaju hladnoću.</p>
-          <ul style="margin: 2px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px">
-            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Ulazna i balkonska vrata</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>PVC ili ALU profil, po vašim merama</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>5 godina garancije na stolariju i ugradnju</li>
-          </ul>
-          <a href="vrata.html" class="btn-cta" style="margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px; padding: 0 20px; background: #C2570B; color: #FFFFFF; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px; box-sizing: border-box">Pogledaj vrata
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Klizni sistemi -->
-      <article class="pc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="height: 200px; background: #D9D7D2; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
-          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: KLIZNI SISTEM NA TERASI</span>
-        </div>
-        <div style="padding: 24px 20px 24px; display: flex; flex-direction: column; gap: 12px">
-          <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Stolarija</div>
-          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.25">Klizni sistemi</h2>
-          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4946">Za izlaz na terasu ili u dvorište. Krilo klizi uz zid i ne zauzima mesto u sobi.</p>
-          <ul style="margin: 2px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px">
-            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Izlaz na terasu ili u dvorište</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Krilo ne zauzima prostor u sobi</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Izrada po meri, sa ugradnjom</li>
-          </ul>
-          <a href="klizni-sistemi.html" class="btn-cta" style="margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px; padding: 0 20px; background: #C2570B; color: #FFFFFF; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px; box-sizing: border-box">Pogledaj klizne sisteme
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Portali -->
-      <article class="pc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="height: 200px; background: #D9D7D2; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
-          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: ALU PORTAL LOKALA</span>
-        </div>
-        <div style="padding: 24px 20px 24px; display: flex; flex-direction: column; gap: 12px">
-          <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Poslovni prostor</div>
-          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.25">Portali</h2>
-          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4946">Ulazi za lokale, radnje i poslovne prostore. Vrata, staklo i ram pravimo kao jednu celinu.</p>
-          <ul style="margin: 2px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px">
-            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Lokali, radnje i poslovni prostori</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Vrata, staklo i ram kao jedna celina</li>
-            <li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C2570B; flex-shrink: 0"></span>Izrada po meri, sa ugradnjom</li>
-          </ul>
-          <a href="portali.html" class="btn-cta" style="margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px; padding: 0 20px; background: #C2570B; color: #FFFFFF; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px; box-sizing: border-box">Pogledaj portale
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Dodatna oprema -->
-      <article class="pc" style="border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="height: 200px; background: #D9D7D2; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
-          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: #4A4946; text-align: center">FOTOGRAFIJA: ROLETNE I DODATNA OPREMA</span>
-        </div>
-        <div style="padding: 24px 20px 24px; display: flex; flex-direction: column; gap: 12px">
-          <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #A84A08">Uz stolariju</div>
-          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.25">Dodatna oprema</h2>
-          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4946">Roletne i ostala oprema koja ide uz vašu stolariju. [DOPUNITE: šta sve nudite, npr. vrste roletni i ostale opreme]</p>
-          <a href="dodatna-oprema.html" class="btn-cta" style="margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; height: 52px; padding: 0 20px; background: #C2570B; color: #FFFFFF; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px; box-sizing: border-box">Pogledaj dodatnu opremu
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg>
-          </a>
-        </div>
-      </article>
+      </a>
     </div>
   </section>
 
@@ -418,11 +312,21 @@ a{color:#A84A08}a:hover{color:#7E3706}
   </section>
 
   <footer style="color: #D6D4CE; background-color: #1B1B1A; border-top: 1px solid rgba(246,245,242,0.12)">
-    <div style="padding: 24px 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
-      <a href="index.html" style="display: flex; align-items: center; background: #FFFFFF; padding: 8px 12px; border-radius: 6px">
-        <img src="img/logo.png" alt="Zprofil - ALU i PVC stolarija" style="height: 32px; width: auto; display: block">
-      </a>
-      <div style="font-size: 14px; color: #9A978F">© 2026 Zotović profil d.o.o.</div>
+    <div style="padding: 48px 16px 32px; display: flex; flex-direction: column; gap: 36px">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px">
+        <a href="index.html" style="display: flex; align-items: center; background: #FFFFFF; padding: 8px 12px; border-radius: 6px"><img src="img/logo.png" alt="Zprofil - ALU i PVC stolarija" style="height: 36px; width: auto; display: block"></a>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #B8B5AE">PVC i ALU stolarija po meri i ventilisane fasade, sa ugradnjom. Iz Bačkog Petrovca, od 2007. godine.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px">
+        <div style="display: flex; flex-direction: column; gap: 12px"><div style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F2B183">Meni</div><a href="index.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 15px">Početna</a><a href="proizvodi.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 15px">Proizvodi</a><a href="fasade.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 15px">Fasade</a><a href="projekti.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 15px">Projekti</a><a href="o-nama.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 15px">O nama</a><a href="kontakt.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 15px">Kontakt</a></div>
+        <div style="display: flex; flex-direction: column; gap: 12px"><div style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F2B183">Proizvodi</div><a href="pvc-stolarija.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 15px">PVC stolarija</a><a href="alu-stolarija.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 15px">ALU stolarija</a><a href="pvc-prozori.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 15px">PVC prozori</a><a href="pvc-vrata.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 15px">PVC vrata</a><a href="alu-portali.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 15px">ALU portali</a><a href="fasade.html" class="ft-a" style="color: #B8B5AE; text-decoration: none; font-size: 15px">Ventilisane fasade</a></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px"><div style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F2B183">Kontakt</div><div style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: #B8B5AE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg><a href="tel:+381638664220" class="ft-a" style="color: #B8B5AE; text-decoration: none">063 866 4220</a></div><div style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: #B8B5AE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><polyline points="3,7 12,13 21,7"></polyline></svg><a href="mailto:info@zprofil.co.rs" class="ft-a" style="color: #B8B5AE; text-decoration: none">info@zprofil.co.rs</a></div><div style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: #B8B5AE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg><a href="https://maps.app.goo.gl/JHqBcYafDoTjPVsn6" target="_blank" rel="noopener" class="ft-a" style="color: #B8B5AE; text-decoration: none">Kosovska 35, Bački Petrovac</a></div><div style="display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: #B8B5AE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12,7 12,12 15.5,14"></polyline></svg><span>Pon - sub, 08 - 15h</span></div></div>
+    </div>
+    <div style="border-top: 1px solid rgba(246,245,242,0.12); padding: 18px 16px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #9A978F">
+      <span>© 2026 Zotović profil d.o.o.</span>
+      <span>Autorizovani REHAU partner</span>
+      <a href="politika-privatnosti.html" class="ft-a" style="color: #9A978F; text-decoration: none">Politika privatnosti</a>
     </div>
   </footer>
   <a href="tel:+381638664220" class="call-fab" aria-label="Pozovite nas">
