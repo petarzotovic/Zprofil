@@ -124,10 +124,11 @@
     f.addEventListener('submit', function (e) {
       e.preventDefault();
       function v(n) { return ((f.elements[n] && f.elements[n].value) || '').trim(); }
+      function chk(n) { return !!(f.elements[n] && f.elements[n].checked); }
       var lines = ['Ime i prezime: ' + v('ime'), 'Telefon: ' + v('telefon'), 'Email: ' + v('email'),
         'Mesto: ' + v('mesto'), 'Šta mi treba: ' + v('proizvod'), '', v('poruka')];
       if (v('proizvod') === 'Prozori') {
-        lines.splice(5, 0, 'Vrsta: ' + v('p_vrsta'), 'Tip profila: ' + v('p_profil'), 'Broj krila: ' + v('p_krila') + (v('p_krila') === 'Jednokrilni' ? ', strana otvaranja: ' + v('p_strana').toLowerCase() : ''), 'Boja: ' + v('p_boja'), 'Staklo: ' + v('p_staklo'),
+        lines.splice(5, 0, 'Vrsta: ' + v('p_vrsta'), 'Tip profila: ' + v('p_profil'), 'Broj krila: ' + v('p_krila') + (v('p_krila') === 'Jednokrilni' ? ', strana otvaranja: ' + v('p_strana').toLowerCase() : ''), 'Boja: ' + v('p_boja'), 'Staklo: ' + v('p_staklo'), 'Dodatna oprema: ' + ([chk('p_roletne') ? 'Roletne' : '', chk('p_komarnik') ? 'Komarnik' : ''].filter(Boolean).join(', ') || 'nema'), 
           'Dimenzije: ' + (v('p_sirina') && v('p_visina') ? v('p_sirina') + ' x ' + v('p_visina') + ' cm (širina x visina)' : 'nisu unete'));
       }
       if (v('proizvod') === 'Vrata') {
@@ -232,7 +233,7 @@
 
   // Konfigurator prozora: boja rama, profil, broj krila, staklo, dimenzije
   document.querySelectorAll('[data-wcfg]').forEach(function (box) {
-    var st = { color: 'bela-9016-sjaj', label: 'Bela 9016 Sjaj', prof: '', glass: '', krila: 'Dvokrilni', strana: 'Levo' };
+    var st = { color: 'bela-9016-sjaj', label: 'Bela 9016 Sjaj', prof: '', glass: '', krila: 'Dvokrilni', strana: 'Levo', rol: false, km: false };
     var pb = box.querySelector('[data-wprof].on'), gb = box.querySelector('[data-wglass].on');
     st.prof = pb ? pb.getAttribute('data-wprof') : ''; st.glass = gb ? gb.getAttribute('data-wglass') : '';
     function lbl(k, v) { var e = box.querySelector('[data-wlbl="' + k + '"]'); if (e) e.textContent = v; }
@@ -243,6 +244,10 @@
       var w = box.querySelector('[data-wwin]');
       if (w) { w.classList.toggle('k1', one); w.classList.toggle('k2', !one); w.classList.toggle('ol', one && st.strana === 'Levo'); w.classList.toggle('or', one && st.strana === 'Desno'); }
       var side = box.querySelector('[data-wside]'); if (side) side.classList.toggle('off', !one);
+      if (w) w.classList.toggle('km', st.km);
+      var rol = box.querySelector('[data-wrol]'); if (rol) { rol.classList.toggle('off', !st.rol); rol.classList.toggle('k1', one); }
+      box.querySelectorAll('[data-wextra]').forEach(function (b) { var on = b.getAttribute('data-wextra') === 'Roletne' ? st.rol : st.km; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      lbl('extra', (st.rol || st.km) ? [st.rol ? 'Roletne' : '', st.km ? 'Komarnik' : ''].filter(Boolean).join(', ') : 'bez dodatne opreme');
       box.querySelectorAll('[data-wcolor]').forEach(function (b) { var on = b.getAttribute('data-wcolor') === st.color; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
       chips('wprof', st.prof); chips('wglass', st.glass); chips('wkrila', st.krila); chips('wstrana', st.strana);
       lbl('color', st.label); lbl('prof', st.prof); lbl('glass', st.glass); lbl('krila', st.krila); lbl('strana', st.strana);
@@ -250,7 +255,8 @@
       var t = box.querySelector('[data-wtag]'); if (t) t.textContent = (one ? 'Jednokrilni, otvaranje ' + st.strana.toLowerCase() : 'Dvokrilni') + ', ' + st.glass.toLowerCase() + ' staklo';
     }
     box.addEventListener('click', function (e) {
-      var b = e.target.closest('[data-wcolor],[data-wprof],[data-wglass],[data-wkrila],[data-wstrana]'); if (!b) return;
+      var b = e.target.closest('[data-wcolor],[data-wprof],[data-wglass],[data-wkrila],[data-wstrana],[data-wextra]'); if (!b) return;
+      if (b.hasAttribute('data-wextra')) { if (b.getAttribute('data-wextra') === 'Roletne') st.rol = !st.rol; else st.km = !st.km; render(); return; }
       if (b.hasAttribute('data-wcolor')) { st.color = b.getAttribute('data-wcolor'); st.label = b.getAttribute('data-label'); }
       else if (b.hasAttribute('data-wprof')) st.prof = b.getAttribute('data-wprof');
       else if (b.hasAttribute('data-wglass')) st.glass = b.getAttribute('data-wglass');
@@ -263,7 +269,7 @@
       e.preventDefault();
       function dim(k) { var i = box.querySelector('[data-wdim="' + k + '"]'); return i ? i.value.trim() : ''; }
       var q = new URLSearchParams({ proizvod: 'Prozori', p_vrsta: box.getAttribute('data-kind'), p_profil: st.prof, p_boja: st.label, p_krila: st.krila,
-        p_strana: st.krila === 'Jednokrilni' ? st.strana : '', p_staklo: st.glass, p_sirina: dim('w'), p_visina: dim('h') });
+        p_strana: st.krila === 'Jednokrilni' ? st.strana : '', p_staklo: st.glass, p_sirina: dim('w'), p_visina: dim('h'), p_roletne: st.rol ? 'Da' : '', p_komarnik: st.km ? 'Da' : '' });
       location.href = 'kontakt.html?' + q.toString() + '#ponuda';
     });
   });
@@ -273,7 +279,7 @@
     var q = new URLSearchParams(location.search);
     if ((q.get('proizvod') === 'Vrata' && q.get('model')) || (q.get('proizvod') === 'Prozori' && q.get('p_profil'))) {
       document.querySelectorAll('form.ponuda-form').forEach(function (f) {
-        ['proizvod', 'vrsta', 'model', 'boja', 'staklo', 'sirina', 'visina', 'p_vrsta', 'p_profil', 'p_boja', 'p_krila', 'p_strana', 'p_staklo', 'p_sirina', 'p_visina'].forEach(function (k) { if (q.get(k) && f.elements[k]) f.elements[k].value = q.get(k); });
+        ['proizvod', 'vrsta', 'model', 'boja', 'staklo', 'sirina', 'visina', 'p_vrsta', 'p_profil', 'p_boja', 'p_krila', 'p_strana', 'p_staklo', 'p_sirina', 'p_visina', 'p_roletne', 'p_komarnik'].forEach(function (k) { var el = f.elements[k]; if (!q.get(k) || !el) return; if (el.type === 'checkbox') el.checked = q.get(k) === 'Da'; else el.value = q.get(k); });
         if (f._syncVr) f._syncVr();
         var t = f.elements['poruka'];
         if (t && f.offsetParent) setTimeout(function () { window.scrollTo(0, f.getBoundingClientRect().top + window.scrollY - (document.querySelector('.hdr') ? document.querySelector('.hdr').offsetHeight + 16 : 16)); t.focus({ preventScroll: true }); }, 80);

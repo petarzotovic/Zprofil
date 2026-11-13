@@ -18,6 +18,7 @@
 .vr-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 form.ponuda-form:has(.vr-box.on) ~ aside{align-self:start}
 .f-off{display:none !important}
+.f-chk{display:inline-flex;align-items:center;gap:10px;font-size:16px;font-weight:500;color:#1B1B1A;cursor:pointer}.f-chk input{width:20px;height:20px;margin:0;accent-color:#C2570B;cursor:pointer}
 .vr-note{margin:0;font-size:13px;line-height:1.5;color:#5B5A56}
 
 @media (min-width: 1200px){
@@ -260,6 +261,7 @@ select.f-in{appearance:none;-webkit-appearance:none;padding-right:44px;cursor:po
 <input class="f-in" type="number" inputmode="numeric" name="p_visina" min="30" max="300" placeholder="npr. 140">
 </label>
 </div>
+<div class="f-lbl" style="gap: 10px">Dodatna oprema<div style="display: flex; flex-wrap: wrap; gap: 10px 24px"><label class="f-chk"><input type="checkbox" name="p_roletne" value="Da">Roletne</label><label class="f-chk"><input type="checkbox" name="p_komarnik" value="Da">Komarnik</label></div></div>
 <p class="vr-note">Profile i boje možete pogledati na stranicama <a href="pvc-prozori.html" style="color: #A84A08">PVC prozori</a> i <a href="alu-prozori.html" style="color: #A84A08">ALU prozori</a>. Dovoljne su okvirne mere.</p>
 </div>
 <div class="vr-box" data-vr-box="1">
@@ -505,6 +507,7 @@ select.f-in{appearance:none;-webkit-appearance:none;padding-right:44px;cursor:po
 <input class="f-in" type="number" inputmode="numeric" name="p_visina" min="30" max="300" placeholder="npr. 140">
 </label>
 </div>
+<div class="f-lbl" style="gap: 10px">Dodatna oprema<div style="display: flex; flex-wrap: wrap; gap: 10px 24px"><label class="f-chk"><input type="checkbox" name="p_roletne" value="Da">Roletne</label><label class="f-chk"><input type="checkbox" name="p_komarnik" value="Da">Komarnik</label></div></div>
 <p class="vr-note">Profile i boje možete pogledati na stranicama <a href="pvc-prozori.html" style="color: #A84A08">PVC prozori</a> i <a href="alu-prozori.html" style="color: #A84A08">ALU prozori</a>. Dovoljne su okvirne mere.</p>
 </div>
 <div class="vr-box" data-vr-box="1">
@@ -599,6 +602,6 @@ select.f-in{appearance:none;-webkit-appearance:none;padding-right:44px;cursor:po
   </a>
 </div>
 </div>
-<script src="js/site.js?v=7"></script>
+<script src="js/site.js?v=8"></script>
 </body>
 </html>
