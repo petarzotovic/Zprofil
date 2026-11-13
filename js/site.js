@@ -114,11 +114,19 @@
   }
   // Forma "Zatrazite ponudu": otvara email sa popunjenim upitom
   document.querySelectorAll('form.ponuda-form').forEach(function (f) {
+    var sel = f.elements['proizvod'], vbox = f.querySelector('[data-vr-box]');
+    function syncVr() { if (vbox && sel) vbox.classList.toggle('on', sel.value === 'Vrata'); }
+    if (sel) sel.addEventListener('change', syncVr);
+    f._syncVr = syncVr;
     f.addEventListener('submit', function (e) {
       e.preventDefault();
       function v(n) { return ((f.elements[n] && f.elements[n].value) || '').trim(); }
       var lines = ['Ime i prezime: ' + v('ime'), 'Telefon: ' + v('telefon'), 'Email: ' + v('email'),
         'Mesto: ' + v('mesto'), 'Šta mi treba: ' + v('proizvod'), '', v('poruka')];
+      if (v('proizvod') === 'Vrata') {
+        lines.splice(5, 0, 'Vrsta: ' + v('vrsta'), 'Model panela: ' + v('model'), 'Boja: ' + v('boja'), 'Staklo: ' + v('staklo'),
+          'Dimenzije: ' + (v('sirina') && v('visina') ? v('sirina') + ' x ' + v('visina') + ' cm (širina x visina)' : 'nisu unete'));
+      }
       var subject = 'Upit za ponudu - ' + (v('ime') || 'sajt');
       window.location.href = 'mailto:info@zprofil.co.rs?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
       var msg = f.querySelector('.form-msg');
@@ -199,9 +207,8 @@
       function dim(k) { var i = box.querySelector('[data-dim="' + k + '"]'); return i ? i.value.trim() : ''; }
       var w = dim('w'), h = dim('h');
       var vrsta = (location.pathname.indexOf('alu-') >= 0) ? 'ALU vrata' : 'PVC vrata';
-      var msg = 'Upit za ' + vrsta + '\nModel panela: ZP ' + model + '\nBoja: ' + label + '\nStaklo: ' + glass +
-        '\nDimenzije: ' + (w && h ? w + ' x ' + h + ' cm (širina x visina)' : 'nisu unete') + '\n\n';
-      location.href = 'kontakt.html?proizvod=Vrata&upit=' + encodeURIComponent(msg) + '#ponuda';
+      var q = new URLSearchParams({ proizvod: 'Vrata', vrsta: vrsta, model: 'ZP ' + model, boja: label, staklo: glass, sirina: w, visina: h });
+      location.href = 'kontakt.html?' + q.toString() + '#ponuda';
     });
     box.querySelectorAll('[data-cfg-step]').forEach(function (b) {
       b.addEventListener('click', function () { model = ((model - 1 + (+b.getAttribute('data-cfg-step')) + MODELS) % MODELS) + 1; render(true); });
@@ -211,6 +218,15 @@
   // Kontakt: popuni formu ako je stigao izbor iz konfiguratora
   (function () {
     var q = new URLSearchParams(location.search);
+    if (q.get('proizvod') === 'Vrata' && q.get('model')) {
+      document.querySelectorAll('form.ponuda-form').forEach(function (f) {
+        ['proizvod', 'vrsta', 'model', 'boja', 'staklo', 'sirina', 'visina'].forEach(function (k) { if (q.get(k) && f.elements[k]) f.elements[k].value = q.get(k); });
+        if (f._syncVr) f._syncVr();
+        var t = f.elements['poruka'];
+        if (t && f.offsetParent) setTimeout(function () { window.scrollTo(0, f.getBoundingClientRect().top + window.scrollY - (document.querySelector('.hdr') ? document.querySelector('.hdr').offsetHeight + 16 : 16)); t.focus({ preventScroll: true }); }, 80);
+      });
+      return;
+    }
     var upit = q.get('upit');
     if (upit) {
       document.querySelectorAll('form.ponuda-form').forEach(function (f) {

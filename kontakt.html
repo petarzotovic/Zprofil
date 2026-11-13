@@ -13,6 +13,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
 <style>
+.vr-box{display:none;flex-direction:column;gap:16px;padding:20px;border:1px solid #E2E0DB;border-radius:8px;background:#F6F5F2}.vr-box.on{display:flex}
+.vr-h{display:flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;color:#1B1B1A}
+.vr-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+form.ponuda-form:has(.vr-box.on) ~ aside{align-self:start}
+.vr-note{margin:0;font-size:13px;line-height:1.5;color:#5B5A56}
+
 @media (min-width: 1200px){
 body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:#1B1B1A;background:#FFFFFF}
 a{color:#A84A08}a:hover{color:#7E3706}
@@ -201,6 +207,46 @@ select.f-in{appearance:none;-webkit-appearance:none;padding-right:44px;cursor:po
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
 </span>
 </label>
+<div class="vr-box" data-vr-box="1">
+<div class="vr-h"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="1"></rect><circle cx="15.5" cy="12" r="1"></circle></svg>Detalji za vrata</div>
+<div class="vr-g">
+<label class="f-lbl">Vrsta vrata
+<span style="position: relative; display: block">
+<select class="f-in" name="vrsta"><option value="PVC vrata">PVC vrata</option><option value="ALU vrata">ALU vrata</option></select>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
+</span>
+</label>
+<label class="f-lbl">Model panela
+<span style="position: relative; display: block">
+<select class="f-in" name="model"><option value="ZP 1">ZP 1</option><option value="ZP 2">ZP 2</option><option value="ZP 3">ZP 3</option><option value="ZP 4">ZP 4</option><option value="ZP 5">ZP 5</option><option value="ZP 6">ZP 6</option><option value="ZP 7">ZP 7</option><option value="ZP 8">ZP 8</option><option value="ZP 9">ZP 9</option><option value="ZP 10">ZP 10</option><option value="ZP 11">ZP 11</option><option value="ZP 12">ZP 12</option><option value="ZP 13">ZP 13</option><option value="ZP 14">ZP 14</option><option value="ZP 15">ZP 15</option><option value="ZP 16">ZP 16</option><option value="ZP 17">ZP 17</option><option value="ZP 18">ZP 18</option><option value="ZP 19">ZP 19</option><option value="ZP 20">ZP 20</option><option value="ZP 21">ZP 21</option><option value="ZP 22">ZP 22</option><option value="ZP 23">ZP 23</option><option value="ZP 24">ZP 24</option><option value="ZP 25">ZP 25</option><option value="ZP 26">ZP 26</option><option value="ZP 27">ZP 27</option><option value="ZP 28">ZP 28</option><option value="ZP 29">ZP 29</option><option value="ZP 30">ZP 30</option><option value="ZP 31">ZP 31</option><option value="ZP 32">ZP 32</option><option value="ZP 33">ZP 33</option><option value="ZP 34">ZP 34</option><option value="ZP 35">ZP 35</option><option value="ZP 36">ZP 36</option><option value="ZP 37">ZP 37</option><option value="ZP 38">ZP 38</option><option value="ZP 39">ZP 39</option><option value="ZP 40">ZP 40</option><option value="ZP 41">ZP 41</option><option value="ZP 42">ZP 42</option><option value="ZP 43">ZP 43</option><option value="ZP 44">ZP 44</option><option value="ZP 45">ZP 45</option><option value="ZP 46">ZP 46</option><option value="ZP 47">ZP 47</option><option value="ZP 48">ZP 48</option><option value="ZP 49">ZP 49</option><option value="ZP 50">ZP 50</option><option value="ZP 51">ZP 51</option><option value="ZP 52">ZP 52</option><option value="ZP 53">ZP 53</option><option value="ZP 54">ZP 54</option><option value="ZP 55">ZP 55</option><option value="ZP 56">ZP 56</option><option value="ZP 57">ZP 57</option><option value="ZP 58">ZP 58</option><option value="ZP 59">ZP 59</option></select>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
+</span>
+</label>
+</div>
+<div class="vr-g">
+<label class="f-lbl">Boja
+<span style="position: relative; display: block">
+<select class="f-in" name="boja"><option value="Bela 9016 Sjaj">Bela 9016 Sjaj</option><option value="Antracit 7016 Mat">Antracit 7016 Mat</option><option value="Crna 9005 Mat">Crna 9005 Mat</option><option value="Braon 8017 Sjaj">Braon 8017 Sjaj</option><option value="Braon 8014 Sjaj">Braon 8014 Sjaj</option><option value="Imitacija eloksaže 9006">Imitacija eloksaže 9006</option><option value="Zlatni hrast">Zlatni hrast</option><option value="Tamni orah">Tamni orah</option></select>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
+</span>
+</label>
+<label class="f-lbl">Staklo
+<span style="position: relative; display: block">
+<select class="f-in" name="staklo"><option value="Providno">Providno</option><option value="Mat (satinato)">Mat (satinato)</option><option value="Ornament">Ornament</option></select>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
+</span>
+</label>
+</div>
+<div class="vr-g">
+<label class="f-lbl">Širina (cm)
+<input class="f-in" type="number" inputmode="numeric" name="sirina" min="40" max="400" placeholder="npr. 100">
+</label>
+<label class="f-lbl">Visina (cm)
+<input class="f-in" type="number" inputmode="numeric" name="visina" min="100" max="400" placeholder="npr. 210">
+</label>
+</div>
+<p class="vr-note">Modele i boje možete pogledati na stranicama <a href="pvc-vrata.html" style="color: #A84A08">PVC vrata</a> i <a href="alu-vrata.html" style="color: #A84A08">ALU vrata</a>. Dovoljne su okvirne mere.</p>
+</div>
 <label class="f-lbl f-grow" style="flex: 1">Poruka
 <textarea class="f-in" name="poruka" rows="5" style="flex: 1" placeholder="Broj komada, okvirne mere, boja, novogradnja ili zamena..."></textarea>
 </label>
@@ -352,6 +398,46 @@ select.f-in{appearance:none;-webkit-appearance:none;padding-right:44px;cursor:po
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
 </span>
 </label>
+<div class="vr-box" data-vr-box="1">
+<div class="vr-h"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2570B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="1"></rect><circle cx="15.5" cy="12" r="1"></circle></svg>Detalji za vrata</div>
+<div class="vr-g" style="grid-template-columns: 1fr">
+<label class="f-lbl">Vrsta vrata
+<span style="position: relative; display: block">
+<select class="f-in" name="vrsta"><option value="PVC vrata">PVC vrata</option><option value="ALU vrata">ALU vrata</option></select>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
+</span>
+</label>
+<label class="f-lbl">Model panela
+<span style="position: relative; display: block">
+<select class="f-in" name="model"><option value="ZP 1">ZP 1</option><option value="ZP 2">ZP 2</option><option value="ZP 3">ZP 3</option><option value="ZP 4">ZP 4</option><option value="ZP 5">ZP 5</option><option value="ZP 6">ZP 6</option><option value="ZP 7">ZP 7</option><option value="ZP 8">ZP 8</option><option value="ZP 9">ZP 9</option><option value="ZP 10">ZP 10</option><option value="ZP 11">ZP 11</option><option value="ZP 12">ZP 12</option><option value="ZP 13">ZP 13</option><option value="ZP 14">ZP 14</option><option value="ZP 15">ZP 15</option><option value="ZP 16">ZP 16</option><option value="ZP 17">ZP 17</option><option value="ZP 18">ZP 18</option><option value="ZP 19">ZP 19</option><option value="ZP 20">ZP 20</option><option value="ZP 21">ZP 21</option><option value="ZP 22">ZP 22</option><option value="ZP 23">ZP 23</option><option value="ZP 24">ZP 24</option><option value="ZP 25">ZP 25</option><option value="ZP 26">ZP 26</option><option value="ZP 27">ZP 27</option><option value="ZP 28">ZP 28</option><option value="ZP 29">ZP 29</option><option value="ZP 30">ZP 30</option><option value="ZP 31">ZP 31</option><option value="ZP 32">ZP 32</option><option value="ZP 33">ZP 33</option><option value="ZP 34">ZP 34</option><option value="ZP 35">ZP 35</option><option value="ZP 36">ZP 36</option><option value="ZP 37">ZP 37</option><option value="ZP 38">ZP 38</option><option value="ZP 39">ZP 39</option><option value="ZP 40">ZP 40</option><option value="ZP 41">ZP 41</option><option value="ZP 42">ZP 42</option><option value="ZP 43">ZP 43</option><option value="ZP 44">ZP 44</option><option value="ZP 45">ZP 45</option><option value="ZP 46">ZP 46</option><option value="ZP 47">ZP 47</option><option value="ZP 48">ZP 48</option><option value="ZP 49">ZP 49</option><option value="ZP 50">ZP 50</option><option value="ZP 51">ZP 51</option><option value="ZP 52">ZP 52</option><option value="ZP 53">ZP 53</option><option value="ZP 54">ZP 54</option><option value="ZP 55">ZP 55</option><option value="ZP 56">ZP 56</option><option value="ZP 57">ZP 57</option><option value="ZP 58">ZP 58</option><option value="ZP 59">ZP 59</option></select>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
+</span>
+</label>
+</div>
+<div class="vr-g" style="grid-template-columns: 1fr">
+<label class="f-lbl">Boja
+<span style="position: relative; display: block">
+<select class="f-in" name="boja"><option value="Bela 9016 Sjaj">Bela 9016 Sjaj</option><option value="Antracit 7016 Mat">Antracit 7016 Mat</option><option value="Crna 9005 Mat">Crna 9005 Mat</option><option value="Braon 8017 Sjaj">Braon 8017 Sjaj</option><option value="Braon 8014 Sjaj">Braon 8014 Sjaj</option><option value="Imitacija eloksaže 9006">Imitacija eloksaže 9006</option><option value="Zlatni hrast">Zlatni hrast</option><option value="Tamni orah">Tamni orah</option></select>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
+</span>
+</label>
+<label class="f-lbl">Staklo
+<span style="position: relative; display: block">
+<select class="f-in" name="staklo"><option value="Providno">Providno</option><option value="Mat (satinato)">Mat (satinato)</option><option value="Ornament">Ornament</option></select>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
+</span>
+</label>
+</div>
+<div class="vr-g">
+<label class="f-lbl">Širina (cm)
+<input class="f-in" type="number" inputmode="numeric" name="sirina" min="40" max="400" placeholder="npr. 100">
+</label>
+<label class="f-lbl">Visina (cm)
+<input class="f-in" type="number" inputmode="numeric" name="visina" min="100" max="400" placeholder="npr. 210">
+</label>
+</div>
+<p class="vr-note">Modele i boje možete pogledati na stranicama <a href="pvc-vrata.html" style="color: #A84A08">PVC vrata</a> i <a href="alu-vrata.html" style="color: #A84A08">ALU vrata</a>. Dovoljne su okvirne mere.</p>
+</div>
 <label class="f-lbl">Poruka
 <textarea class="f-in" name="poruka" rows="5" placeholder="Broj komada, okvirne mere, boja, novogradnja ili zamena..."></textarea>
 </label>
