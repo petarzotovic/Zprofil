@@ -171,6 +171,7 @@
       box.querySelector('[data-cfg-capt]').textContent = 'ZP ' + model + ' - ' + label;
       box.querySelector('[data-cfg-color]').textContent = label;
       box.querySelector('[data-cfg-model]').textContent = 'ZP ' + model;
+      var mdi = box.querySelector('[data-md-img]'); if (mdi) mdi.src = path(model, color);
       swatches.forEach(function (s) { var on = s.getAttribute('data-color') === color; s.classList.toggle('on', on); s.setAttribute('aria-pressed', on ? 'true' : 'false'); });
       thumbs.forEach(function (t) {
         var n = +t.getAttribute('data-model'), on = n === model;
@@ -190,7 +191,14 @@
       thumbs.forEach(function (t) { io.observe(t); });
     } else { thumbs.forEach(show); }
     swatches.forEach(function (s) { s.addEventListener('click', function () { color = s.getAttribute('data-color'); label = s.getAttribute('data-label'); render(false); }); });
-    thumbs.forEach(function (t) { t.addEventListener('click', function () { model = +t.getAttribute('data-model'); render(true); }); });
+    // Padajuca lista modela sa slikama
+    var md = box.querySelector('.md'), mdBtn = box.querySelector('[data-md-btn]');
+    function setMd(open) { if (!md) return; md.classList.toggle('open', open); if (mdBtn) mdBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) { var on = box.querySelector('.th.on'); if (on) { on.scrollIntoView({ block: 'nearest' }); } thumbs.forEach(function (t) { if (!t._seen) { var r = t.getBoundingClientRect(); if (r.height) show(t); } }); } }
+    if (mdBtn) mdBtn.addEventListener('click', function () { setMd(!md.classList.contains('open')); });
+    document.addEventListener('click', function (e) { if (md && md.classList.contains('open') && !md.contains(e.target)) setMd(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMd(false); });
+    thumbs.forEach(function (t) { t.addEventListener('click', function () { model = +t.getAttribute('data-model'); render(false); setMd(false); }); });
     // Staklo, dimenzije i slanje upita na kontakt formu
     var glass = 'Providno';
     var glasses = box.querySelectorAll('[data-glass]');
