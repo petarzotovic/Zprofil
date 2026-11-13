@@ -17,6 +17,7 @@
 .vr-h{display:flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;color:#1B1B1A}
 .vr-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 form.ponuda-form:has(.vr-box.on) ~ aside{align-self:start}
+.f-off{display:none !important}
 .vr-note{margin:0;font-size:13px;line-height:1.5;color:#5B5A56}
 
 @media (min-width: 1200px){
@@ -244,7 +245,7 @@ select.f-in{appearance:none;-webkit-appearance:none;padding-right:44px;cursor:po
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
 </span>
 </label>
-<label class="f-lbl">Otvara se (jednokrilni)
+<label class="f-lbl" data-strana-lbl="1">Strana otvaranja
 <span style="position: relative; display: block">
 <select class="f-in" name="p_strana"><option value="Levo">Levo</option><option value="Desno">Desno</option></select>
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
@@ -489,7 +490,7 @@ select.f-in{appearance:none;-webkit-appearance:none;padding-right:44px;cursor:po
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
 </span>
 </label>
-<label class="f-lbl">Otvara se (jednokrilni)
+<label class="f-lbl" data-strana-lbl="1">Strana otvaranja
 <span style="position: relative; display: block">
 <select class="f-in" name="p_strana"><option value="Levo">Levo</option><option value="Desno">Desno</option></select>
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B1B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 19px; pointer-events: none"><polyline points="6,9 12,15 18,9"></polyline></svg>
@@ -598,6 +599,6 @@ select.f-in{appearance:none;-webkit-appearance:none;padding-right:44px;cursor:po
   </a>
 </div>
 </div>
-<script src="js/site.js?v=6"></script>
+<script src="js/site.js?v=7"></script>
 </body>
 </html>

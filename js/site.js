@@ -116,7 +116,9 @@
   document.querySelectorAll('form.ponuda-form').forEach(function (f) {
     var sel = f.elements['proizvod'], vbox = f.querySelector('[data-vr-box]');
     var pbox = f.querySelector('[data-pr-box]');
-    function syncVr() { if (vbox && sel) vbox.classList.toggle('on', sel.value === 'Vrata'); if (pbox && sel) pbox.classList.toggle('on', sel.value === 'Prozori'); }
+    function syncVr() { if (vbox && sel) vbox.classList.toggle('on', sel.value === 'Vrata'); if (pbox && sel) pbox.classList.toggle('on', sel.value === 'Prozori');
+      var kr = f.elements['p_krila'], sl = f.querySelector('[data-strana-lbl]'); if (kr && sl) sl.classList.toggle('f-off', kr.value === 'Dvokrilni'); }
+    if (f.elements['p_krila']) f.elements['p_krila'].addEventListener('change', syncVr);
     if (sel) sel.addEventListener('change', syncVr);
     f._syncVr = syncVr;
     f.addEventListener('submit', function (e) {
@@ -125,7 +127,7 @@
       var lines = ['Ime i prezime: ' + v('ime'), 'Telefon: ' + v('telefon'), 'Email: ' + v('email'),
         'Mesto: ' + v('mesto'), 'Šta mi treba: ' + v('proizvod'), '', v('poruka')];
       if (v('proizvod') === 'Prozori') {
-        lines.splice(5, 0, 'Vrsta: ' + v('p_vrsta'), 'Tip profila: ' + v('p_profil'), 'Broj krila: ' + v('p_krila') + (v('p_krila') === 'Jednokrilni' ? ', otvara se ' + v('p_strana').toLowerCase() : ''), 'Boja: ' + v('p_boja'), 'Staklo: ' + v('p_staklo'),
+        lines.splice(5, 0, 'Vrsta: ' + v('p_vrsta'), 'Tip profila: ' + v('p_profil'), 'Broj krila: ' + v('p_krila') + (v('p_krila') === 'Jednokrilni' ? ', strana otvaranja: ' + v('p_strana').toLowerCase() : ''), 'Boja: ' + v('p_boja'), 'Staklo: ' + v('p_staklo'),
           'Dimenzije: ' + (v('p_sirina') && v('p_visina') ? v('p_sirina') + ' x ' + v('p_visina') + ' cm (širina x visina)' : 'nisu unete'));
       }
       if (v('proizvod') === 'Vrata') {
@@ -245,7 +247,7 @@
       chips('wprof', st.prof); chips('wglass', st.glass); chips('wkrila', st.krila); chips('wstrana', st.strana);
       lbl('color', st.label); lbl('prof', st.prof); lbl('glass', st.glass); lbl('krila', st.krila); lbl('strana', st.strana);
       var c = box.querySelector('[data-wcapt]'); if (c) c.textContent = st.prof + ' - ' + st.label;
-      var t = box.querySelector('[data-wtag]'); if (t) t.textContent = (one ? 'Jednokrilni, otvara se ' + st.strana.toLowerCase() : 'Dvokrilni') + ', ' + st.glass.toLowerCase() + ' staklo';
+      var t = box.querySelector('[data-wtag]'); if (t) t.textContent = (one ? 'Jednokrilni, otvaranje ' + st.strana.toLowerCase() : 'Dvokrilni') + ', ' + st.glass.toLowerCase() + ' staklo';
     }
     box.addEventListener('click', function (e) {
       var b = e.target.closest('[data-wcolor],[data-wprof],[data-wglass],[data-wkrila],[data-wstrana]'); if (!b) return;
