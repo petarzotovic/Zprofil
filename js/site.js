@@ -163,8 +163,6 @@
       box.querySelector('[data-cfg-capt]').textContent = 'ZP ' + model + ' - ' + label;
       box.querySelector('[data-cfg-color]').textContent = label;
       box.querySelector('[data-cfg-model]').textContent = 'ZP ' + model;
-      var cta = box.querySelector('[data-cfg-cta]');
-      if (cta) cta.href = 'kontakt.html?panel=ZP-' + model + '&boja=' + color + '#ponuda';
       swatches.forEach(function (s) { var on = s.getAttribute('data-color') === color; s.classList.toggle('on', on); s.setAttribute('aria-pressed', on ? 'true' : 'false'); });
       thumbs.forEach(function (t) {
         var n = +t.getAttribute('data-model'), on = n === model;
@@ -185,6 +183,26 @@
     } else { thumbs.forEach(show); }
     swatches.forEach(function (s) { s.addEventListener('click', function () { color = s.getAttribute('data-color'); label = s.getAttribute('data-label'); render(false); }); });
     thumbs.forEach(function (t) { t.addEventListener('click', function () { model = +t.getAttribute('data-model'); render(true); }); });
+    // Staklo, dimenzije i slanje upita na kontakt formu
+    var glass = 'Providno';
+    var glasses = box.querySelectorAll('[data-glass]');
+    glasses.forEach(function (g) {
+      g.addEventListener('click', function () {
+        glass = g.getAttribute('data-glass');
+        glasses.forEach(function (x) { var on = x === g; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+        var gl = box.querySelector('[data-cfg-glass]'); if (gl) gl.textContent = glass;
+      });
+    });
+    var cta = box.querySelector('[data-cfg-cta]');
+    if (cta) cta.addEventListener('click', function (e) {
+      e.preventDefault();
+      function dim(k) { var i = box.querySelector('[data-dim="' + k + '"]'); return i ? i.value.trim() : ''; }
+      var w = dim('w'), h = dim('h');
+      var vrsta = (location.pathname.indexOf('alu-') >= 0) ? 'ALU vrata' : 'PVC vrata';
+      var msg = 'Upit za ' + vrsta + '\nModel panela: ZP ' + model + '\nBoja: ' + label + '\nStaklo: ' + glass +
+        '\nDimenzije: ' + (w && h ? w + ' x ' + h + ' cm (širina x visina)' : 'nisu unete') + '\n\n';
+      location.href = 'kontakt.html?proizvod=Vrata&upit=' + encodeURIComponent(msg) + '#ponuda';
+    });
     box.querySelectorAll('[data-cfg-step]').forEach(function (b) {
       b.addEventListener('click', function () { model = ((model - 1 + (+b.getAttribute('data-cfg-step')) + MODELS) % MODELS) + 1; render(true); });
     });
@@ -193,6 +211,18 @@
   // Kontakt: popuni formu ako je stigao izbor iz konfiguratora
   (function () {
     var q = new URLSearchParams(location.search);
+    var upit = q.get('upit');
+    if (upit) {
+      document.querySelectorAll('form.ponuda-form').forEach(function (f) {
+        var sel = f.elements['proizvod']; if (sel && q.get('proizvod')) sel.value = q.get('proizvod');
+        var t = f.elements['poruka'];
+        if (t) {
+          t.value = upit;
+          if (f.offsetParent) setTimeout(function () { window.scrollTo(0, f.getBoundingClientRect().top + window.scrollY - (document.querySelector('.hdr') ? document.querySelector('.hdr').offsetHeight + 16 : 16)); t.focus({ preventScroll: true }); t.setSelectionRange(t.value.length, t.value.length); }, 80);
+        }
+      });
+      return;
+    }
     var panel = q.get('panel'); if (!panel) return;
     var names = {"bela-9016-sjaj": "Bela 9016 Sjaj", "antracit-7016-mat": "Antracit 7016 Mat", "crna-9005-mat": "Crna 9005 Mat", "braon-8017-sjaj": "Braon 8017 Sjaj", "braon-8014-sjaj": "Braon 8014 Sjaj", "eloksaza-9006": "Imitacija eloksaže 9006", "zlatni-hrast": "Zlatni hrast", "tamni-orah": "Tamni orah"};
     var boja = names[q.get('boja')] || '';
