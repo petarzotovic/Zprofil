@@ -115,7 +115,8 @@
   // Forma "Zatrazite ponudu": otvara email sa popunjenim upitom
   document.querySelectorAll('form.ponuda-form').forEach(function (f) {
     var sel = f.elements['proizvod'], vbox = f.querySelector('[data-vr-box]');
-    function syncVr() { if (vbox && sel) vbox.classList.toggle('on', sel.value === 'Vrata'); }
+    var pbox = f.querySelector('[data-pr-box]');
+    function syncVr() { if (vbox && sel) vbox.classList.toggle('on', sel.value === 'Vrata'); if (pbox && sel) pbox.classList.toggle('on', sel.value === 'Prozori'); }
     if (sel) sel.addEventListener('change', syncVr);
     f._syncVr = syncVr;
     f.addEventListener('submit', function (e) {
@@ -123,6 +124,10 @@
       function v(n) { return ((f.elements[n] && f.elements[n].value) || '').trim(); }
       var lines = ['Ime i prezime: ' + v('ime'), 'Telefon: ' + v('telefon'), 'Email: ' + v('email'),
         'Mesto: ' + v('mesto'), 'Šta mi treba: ' + v('proizvod'), '', v('poruka')];
+      if (v('proizvod') === 'Prozori') {
+        lines.splice(5, 0, 'Vrsta: ' + v('p_vrsta'), 'Tip profila: ' + v('p_profil'), 'Boja: ' + v('p_boja'), 'Staklo: ' + v('p_staklo'),
+          'Dimenzije: ' + (v('p_sirina') && v('p_visina') ? v('p_sirina') + ' x ' + v('p_visina') + ' cm (širina x visina)' : 'nisu unete'));
+      }
       if (v('proizvod') === 'Vrata') {
         lines.splice(5, 0, 'Vrsta: ' + v('vrsta'), 'Model panela: ' + v('model'), 'Boja: ' + v('boja'), 'Staklo: ' + v('staklo'),
           'Dimenzije: ' + (v('sirina') && v('visina') ? v('sirina') + ' x ' + v('visina') + ' cm (širina x visina)' : 'nisu unete'));
@@ -223,12 +228,45 @@
     });
   });
 
+  // Konfigurator prozora: boja rama, profil, staklo, dimenzije
+  document.querySelectorAll('[data-wcfg]').forEach(function (box) {
+    var st = { color: 'bela-9016-sjaj', label: 'Bela 9016 Sjaj', prof: '', glass: '' };
+    var pb = box.querySelector('[data-wprof].on'), gb = box.querySelector('[data-wglass].on');
+    st.prof = pb ? pb.getAttribute('data-wprof') : ''; st.glass = gb ? gb.getAttribute('data-wglass') : '';
+    function lbl(k, v) { var e = box.querySelector('[data-wlbl="' + k + '"]'); if (e) e.textContent = v; }
+    function render() {
+      box.querySelectorAll('[data-wframe]').forEach(function (el) { el.className = el.className.replace(/\bsw-[a-z0-9-]+/g, '').trim() + ' sw-' + st.color; });
+      box.querySelectorAll('[data-wcolor]').forEach(function (b) { var on = b.getAttribute('data-wcolor') === st.color; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      ['wprof', 'wglass'].forEach(function (k) {
+        var val = k === 'wprof' ? st.prof : st.glass;
+        box.querySelectorAll('[data-' + k + ']').forEach(function (b) { var on = b.getAttribute('data-' + k) === val; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      });
+      lbl('color', st.label); lbl('prof', st.prof); lbl('glass', st.glass);
+      var c = box.querySelector('[data-wcapt]'); if (c) c.textContent = st.prof + ' - ' + st.label;
+      var t = box.querySelector('[data-wtag]'); if (t) t.textContent = st.glass + ' staklo';
+    }
+    box.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-wcolor],[data-wprof],[data-wglass]'); if (!b) return;
+      if (b.hasAttribute('data-wcolor')) { st.color = b.getAttribute('data-wcolor'); st.label = b.getAttribute('data-label'); }
+      else if (b.hasAttribute('data-wprof')) st.prof = b.getAttribute('data-wprof');
+      else st.glass = b.getAttribute('data-wglass');
+      render();
+    });
+    var cta = box.querySelector('[data-wcta]');
+    if (cta) cta.addEventListener('click', function (e) {
+      e.preventDefault();
+      function dim(k) { var i = box.querySelector('[data-wdim="' + k + '"]'); return i ? i.value.trim() : ''; }
+      var q = new URLSearchParams({ proizvod: 'Prozori', p_vrsta: box.getAttribute('data-kind'), p_profil: st.prof, p_boja: st.label, p_staklo: st.glass, p_sirina: dim('w'), p_visina: dim('h') });
+      location.href = 'kontakt.html?' + q.toString() + '#ponuda';
+    });
+  });
+
   // Kontakt: popuni formu ako je stigao izbor iz konfiguratora
   (function () {
     var q = new URLSearchParams(location.search);
-    if (q.get('proizvod') === 'Vrata' && q.get('model')) {
+    if ((q.get('proizvod') === 'Vrata' && q.get('model')) || (q.get('proizvod') === 'Prozori' && q.get('p_profil'))) {
       document.querySelectorAll('form.ponuda-form').forEach(function (f) {
-        ['proizvod', 'vrsta', 'model', 'boja', 'staklo', 'sirina', 'visina'].forEach(function (k) { if (q.get(k) && f.elements[k]) f.elements[k].value = q.get(k); });
+        ['proizvod', 'vrsta', 'model', 'boja', 'staklo', 'sirina', 'visina', 'p_vrsta', 'p_profil', 'p_boja', 'p_staklo', 'p_sirina', 'p_visina'].forEach(function (k) { if (q.get(k) && f.elements[k]) f.elements[k].value = q.get(k); });
         if (f._syncVr) f._syncVr();
         var t = f.elements['poruka'];
         if (t && f.offsetParent) setTimeout(function () { window.scrollTo(0, f.getBoundingClientRect().top + window.scrollY - (document.querySelector('.hdr') ? document.querySelector('.hdr').offsetHeight + 16 : 16)); t.focus({ preventScroll: true }); }, 80);
